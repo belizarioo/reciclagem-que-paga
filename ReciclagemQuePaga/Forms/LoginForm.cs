@@ -28,8 +28,8 @@ namespace ReciclagemQuePaga
 
         private void btn_entrar_Click(object sender, EventArgs e)
         {
-            //email = txb_email.Text;
-            //senha = txb_senha.Text;
+            email = txb_email.Text;
+            senha = txb_senha.Text;
 
 
             if (email == "Gui" && senha == "123")
@@ -45,10 +45,12 @@ namespace ReciclagemQuePaga
                     form.Name = "telaInicial";
                     form.Show();
                     this.Hide();
+
                 }
                 else
                 {
                     form.Activate();
+                    //form.Show();
                 }
             }
 
