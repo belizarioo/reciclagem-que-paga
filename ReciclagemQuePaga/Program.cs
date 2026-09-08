@@ -1,3 +1,5 @@
+using ReciclagemQuePaga;
+using ReciclagemQuePaga.Forms;
 namespace ReciclagemQuePaga
 {
     internal static class Program
