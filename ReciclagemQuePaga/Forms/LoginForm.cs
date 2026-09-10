@@ -81,17 +81,6 @@ namespace ReciclagemQuePaga
 
         }
 
-        private void InitializeComponent()
-        {
-            SuspendLayout();
-            // 
-            // Form1
-            // 
-            ClientSize = new Size(779, 474);
-            Name = "Form1";
-            Load += Form1_Load_1;
-            ResumeLayout(false);
-
-        }
+      
     }
 }
