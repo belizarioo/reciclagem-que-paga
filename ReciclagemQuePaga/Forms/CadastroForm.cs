@@ -12,6 +12,7 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class CadastroForm : Form
     {
+
         public CadastroForm()
         {
             InitializeComponent();
@@ -21,5 +22,11 @@ namespace ReciclagemQuePaga.Forms
         {
 
         }
+        
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
