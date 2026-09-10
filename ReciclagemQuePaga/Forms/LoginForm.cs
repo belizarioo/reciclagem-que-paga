@@ -37,6 +37,8 @@ namespace ReciclagemQuePaga
                 txb_email.Text = email;
                 txb_senha.Text = senha;
 
+
+
                 TelaInicial form = (TelaInicial)Application.OpenForms["telaInicial"];
 
                 if (form == null)
@@ -60,7 +62,7 @@ namespace ReciclagemQuePaga
                 LimparCampos();
             }
         }
-
+      
         private void cb_senha_CheckedChanged(object sender, EventArgs e)
         {
             if(cb_senha.Checked == true )
@@ -81,6 +83,6 @@ namespace ReciclagemQuePaga
 
         }
 
-      
+        
     }
 }
