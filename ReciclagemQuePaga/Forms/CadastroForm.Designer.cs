@@ -42,13 +42,14 @@
             txb_nome = new TextBox();
             label6 = new Label();
             msk_txb_cpf = new MaskedTextBox();
+            voltar_telalogin = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.Font = new Font("Trebuchet MS", 22F, FontStyle.Bold);
-            label1.Location = new Point(490, 9);
+            label1.Location = new Point(502, 9);
             label1.Name = "label1";
             label1.Size = new Size(180, 39);
             label1.TabIndex = 0;
@@ -61,7 +62,7 @@
             txb_email.Multiline = true;
             txb_email.Name = "txb_email";
             txb_email.PlaceholderText = "Insira seu e-mail";
-            txb_email.Size = new Size(271, 34);
+            txb_email.Size = new Size(338, 34);
             txb_email.TabIndex = 1;
             // 
             // txb_senha
@@ -71,7 +72,7 @@
             txb_senha.Multiline = true;
             txb_senha.Name = "txb_senha";
             txb_senha.PlaceholderText = "Insira sua senha";
-            txb_senha.Size = new Size(271, 34);
+            txb_senha.Size = new Size(338, 34);
             txb_senha.TabIndex = 2;
             // 
             // label2
@@ -107,15 +108,18 @@
             // 
             // btn_cadastrar
             // 
+            btn_cadastrar.BackColor = Color.Green;
+            btn_cadastrar.FlatAppearance.BorderColor = Color.Honeydew;
             btn_cadastrar.FlatAppearance.BorderSize = 0;
-            btn_cadastrar.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_cadastrar.ForeColor = SystemColors.ActiveCaptionText;
-            btn_cadastrar.Location = new Point(592, 393);
+            btn_cadastrar.FlatStyle = FlatStyle.Flat;
+            btn_cadastrar.Font = new Font("Trebuchet MS", 12F);
+            btn_cadastrar.ForeColor = SystemColors.ButtonHighlight;
+            btn_cadastrar.Location = new Point(659, 382);
             btn_cadastrar.Name = "btn_cadastrar";
             btn_cadastrar.Size = new Size(100, 29);
             btn_cadastrar.TabIndex = 6;
             btn_cadastrar.Text = "Cadastrar";
-            btn_cadastrar.UseVisualStyleBackColor = true;
+            btn_cadastrar.UseVisualStyleBackColor = false;
             // 
             // txb_confirmar_senha
             // 
@@ -124,7 +128,7 @@
             txb_confirmar_senha.Multiline = true;
             txb_confirmar_senha.Name = "txb_confirmar_senha";
             txb_confirmar_senha.PlaceholderText = "Confirme sua senha";
-            txb_confirmar_senha.Size = new Size(271, 34);
+            txb_confirmar_senha.Size = new Size(338, 34);
             txb_confirmar_senha.TabIndex = 7;
             // 
             // label4
@@ -154,7 +158,7 @@
             txb_nome.Multiline = true;
             txb_nome.Name = "txb_nome";
             txb_nome.PlaceholderText = "Insira seu nome completo";
-            txb_nome.Size = new Size(271, 34);
+            txb_nome.Size = new Size(338, 34);
             txb_nome.TabIndex = 10;
             // 
             // label6
@@ -173,8 +177,19 @@
             msk_txb_cpf.Location = new Point(420, 147);
             msk_txb_cpf.Mask = "000,000,000,00";
             msk_txb_cpf.Name = "msk_txb_cpf";
-            msk_txb_cpf.Size = new Size(271, 31);
+            msk_txb_cpf.Size = new Size(338, 31);
             msk_txb_cpf.TabIndex = 12;
+            // 
+            // voltar_telalogin
+            // 
+            voltar_telalogin.AutoSize = true;
+            voltar_telalogin.Font = new Font("Segoe UI", 8F);
+            voltar_telalogin.Location = new Point(628, 428);
+            voltar_telalogin.Name = "voltar_telalogin";
+            voltar_telalogin.Size = new Size(131, 13);
+            voltar_telalogin.TabIndex = 13;
+            voltar_telalogin.TabStop = true;
+            voltar_telalogin.Text = "Voltar para tela de login";
             // 
             // CadastroForm
             // 
@@ -182,6 +197,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(808, 473);
+            Controls.Add(voltar_telalogin);
             Controls.Add(msk_txb_cpf);
             Controls.Add(label6);
             Controls.Add(txb_nome);
@@ -217,5 +233,6 @@
         private TextBox txb_nome;
         private Label label6;
         private MaskedTextBox msk_txb_cpf;
+        private LinkLabel voltar_telalogin;
     }
 }

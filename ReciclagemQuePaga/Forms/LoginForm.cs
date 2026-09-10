@@ -26,6 +26,13 @@ namespace ReciclagemQuePaga
             txb_senha.UseSystemPasswordChar = true;
         }
 
+            private void Form1_Load(object sender, EventArgs e)
+        {
+            // Remove o foco inicial dos campos
+            this.ActiveControl = null;
+        }
+        
+
         private void btn_entrar_Click(object sender, EventArgs e)
         {
             email = txb_email.Text;
@@ -65,7 +72,7 @@ namespace ReciclagemQuePaga
       
         private void cb_senha_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_senha.Checked == true )
+            if (cb_senha.Checked == true)
             {
                 txb_senha.UseSystemPasswordChar = false;
             }
@@ -78,11 +85,12 @@ namespace ReciclagemQuePaga
             }
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
+      
+        
+          
 
-        }
+    }
 
         
     }
-}
+
