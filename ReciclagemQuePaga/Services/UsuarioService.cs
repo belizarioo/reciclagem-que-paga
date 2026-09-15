@@ -17,10 +17,14 @@ namespace ReciclagemQuePaga.Services
         }
 
         public void CadastroUsuario(Usuario usuario)
-        {
+        {   
             _repository.Cadastrar(usuario);
         }
         
+        public Usuario? BuscarPorEmail(string email)
+        {
+            return _repository.BuscarPorEmail(email);
+        }
 
     }
 
