@@ -20,5 +20,10 @@ namespace ReciclagemQuePaga.Data
         {
             return _context.Materiais.ToList();
         }
+
+        public Material? BuscarPorId(int id)
+        {
+            return _context.Materiais.Find(id);
+        }
     }
 }
