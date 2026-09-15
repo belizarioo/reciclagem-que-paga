@@ -20,10 +20,10 @@ namespace ReciclagemQuePaga.Forms
             int saldo = 500;
 
             lbl_saldo.Text = $"R$ {saldo}";
-            lbl_nU.Text = "Olá, " + usuarioLogado;
+            lbl_nU.Text = "Olá, " + usuarioLogado + "!";
         }
 
-        
+
 
         bool menuAberto = true;
 
@@ -101,7 +101,14 @@ namespace ReciclagemQuePaga.Forms
 
         private void lbl_nU_Click(object sender, EventArgs e)
         {
-            
+
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
