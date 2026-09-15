@@ -35,8 +35,8 @@
             btn_entrar = new Button();
             cb_senha = new CheckBox();
             link_cadastro = new LinkLabel();
-            label2 = new Label();
-            label3 = new Label();
+            lbl_email = new Label();
+            lbl_senha = new Label();
             label1 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -128,27 +128,27 @@
             link_cadastro.TextAlign = ContentAlignment.MiddleCenter;
             link_cadastro.VisitedLinkColor = Color.FromArgb(40, 40, 40);
             // 
-            // label2
+            // lbl_email
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Trebuchet MS", 13F);
-            label2.Location = new Point(12, 129);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(60, 23);
-            label2.TabIndex = 3;
-            label2.Text = "Email:";
+            lbl_email.AutoSize = true;
+            lbl_email.Font = new Font("Trebuchet MS", 13F);
+            lbl_email.Location = new Point(12, 129);
+            lbl_email.Margin = new Padding(4, 0, 4, 0);
+            lbl_email.Name = "lbl_email";
+            lbl_email.Size = new Size(60, 23);
+            lbl_email.TabIndex = 3;
+            lbl_email.Text = "Email:";
             // 
-            // label3
+            // lbl_senha
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 13F);
-            label3.Location = new Point(12, 189);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 23);
-            label3.TabIndex = 4;
-            label3.Text = "Senha:";
+            lbl_senha.AutoSize = true;
+            lbl_senha.Font = new Font("Trebuchet MS", 13F);
+            lbl_senha.Location = new Point(12, 189);
+            lbl_senha.Margin = new Padding(4, 0, 4, 0);
+            lbl_senha.Name = "lbl_senha";
+            lbl_senha.Size = new Size(65, 23);
+            lbl_senha.TabIndex = 4;
+            lbl_senha.Text = "Senha:";
             // 
             // label1
             // 
@@ -192,8 +192,8 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label1);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lbl_senha);
+            Controls.Add(lbl_email);
             Controls.Add(link_cadastro);
             Controls.Add(cb_senha);
             Controls.Add(btn_entrar);
@@ -217,8 +217,8 @@
         private Button btn_entrar;
         private CheckBox cb_senha;
         private LinkLabel link_cadastro;
-        private Label label2;
-        private Label label3;
+        private Label lbl_email;
+        private Label lbl_senha;
         private Label label1;
         private Label label4;
         private Label label5;

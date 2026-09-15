@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroForm));
-            label1 = new Label();
+            lbl_cc = new Label();
             txb_email = new TextBox();
             txb_senha = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
+            lbl_email = new Label();
+            lbl_senha = new Label();
             pictureBox1 = new PictureBox();
             btn_cadastrar = new Button();
             txb_confirmar_senha = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
+            lbl_csenha = new Label();
+            lbl_nome = new Label();
             txb_nome = new TextBox();
-            label6 = new Label();
+            lbl_cpf = new Label();
             msk_txb_cpf = new MaskedTextBox();
             voltar_telalogin = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lbl_cc
             // 
-            label1.Font = new Font("Trebuchet MS", 22F, FontStyle.Bold);
-            label1.Location = new Point(502, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(180, 39);
-            label1.TabIndex = 0;
-            label1.Text = "Criar Conta";
+            lbl_cc.Font = new Font("Trebuchet MS", 22F, FontStyle.Bold);
+            lbl_cc.Location = new Point(502, 9);
+            lbl_cc.Name = "lbl_cc";
+            lbl_cc.Size = new Size(180, 39);
+            lbl_cc.TabIndex = 0;
+            lbl_cc.Text = "Criar Conta";
             // 
             // txb_email
             // 
@@ -64,6 +64,7 @@
             txb_email.PlaceholderText = "Insira seu e-mail";
             txb_email.Size = new Size(338, 34);
             txb_email.TabIndex = 1;
+            txb_email.TextChanged += txb_email_TextChanged;
             // 
             // txb_senha
             // 
@@ -75,25 +76,25 @@
             txb_senha.Size = new Size(338, 34);
             txb_senha.TabIndex = 2;
             // 
-            // label2
+            // lbl_email
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(421, 179);
-            label2.Name = "label2";
-            label2.Size = new Size(64, 24);
-            label2.TabIndex = 3;
-            label2.Text = "Email:";
+            lbl_email.AutoSize = true;
+            lbl_email.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_email.Location = new Point(421, 179);
+            lbl_email.Name = "lbl_email";
+            lbl_email.Size = new Size(64, 24);
+            lbl_email.TabIndex = 3;
+            lbl_email.Text = "Email:";
             // 
-            // label3
+            // lbl_senha
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(421, 242);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 24);
-            label3.TabIndex = 4;
-            label3.Text = "Senha:";
+            lbl_senha.AutoSize = true;
+            lbl_senha.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_senha.Location = new Point(421, 242);
+            lbl_senha.Name = "lbl_senha";
+            lbl_senha.Size = new Size(67, 24);
+            lbl_senha.TabIndex = 4;
+            lbl_senha.Text = "Senha:";
             // 
             // pictureBox1
             // 
@@ -131,25 +132,26 @@
             txb_confirmar_senha.Size = new Size(338, 34);
             txb_confirmar_senha.TabIndex = 7;
             // 
-            // label4
+            // lbl_csenha
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(421, 315);
-            label4.Name = "label4";
-            label4.Size = new Size(156, 24);
-            label4.TabIndex = 8;
-            label4.Text = "Confirmar Senha:";
+            lbl_csenha.AutoSize = true;
+            lbl_csenha.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_csenha.Location = new Point(421, 315);
+            lbl_csenha.Name = "lbl_csenha";
+            lbl_csenha.Size = new Size(156, 24);
+            lbl_csenha.TabIndex = 8;
+            lbl_csenha.Text = "Confirmar Senha:";
             // 
-            // label5
+            // lbl_nome
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(421, 56);
-            label5.Name = "label5";
-            label5.Size = new Size(65, 24);
-            label5.TabIndex = 9;
-            label5.Text = "Nome:";
+            lbl_nome.AutoSize = true;
+            lbl_nome.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_nome.Location = new Point(421, 56);
+            lbl_nome.Name = "lbl_nome";
+            lbl_nome.Size = new Size(65, 24);
+            lbl_nome.TabIndex = 9;
+            lbl_nome.Text = "Nome:";
+            lbl_nome.Click += lbl_nome_Click;
             // 
             // txb_nome
             // 
@@ -161,15 +163,15 @@
             txb_nome.Size = new Size(338, 34);
             txb_nome.TabIndex = 10;
             // 
-            // label6
+            // lbl_cpf
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(420, 120);
-            label6.Name = "label6";
-            label6.Size = new Size(49, 24);
-            label6.TabIndex = 11;
-            label6.Text = "CPF:";
+            lbl_cpf.AutoSize = true;
+            lbl_cpf.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_cpf.Location = new Point(420, 120);
+            lbl_cpf.Name = "lbl_cpf";
+            lbl_cpf.Size = new Size(49, 24);
+            lbl_cpf.TabIndex = 11;
+            lbl_cpf.Text = "CPF:";
             // 
             // msk_txb_cpf
             // 
@@ -190,6 +192,7 @@
             voltar_telalogin.TabIndex = 13;
             voltar_telalogin.TabStop = true;
             voltar_telalogin.Text = "Voltar para tela de login";
+            voltar_telalogin.LinkClicked += voltar_telalogin_LinkClicked;
             // 
             // CadastroForm
             // 
@@ -199,18 +202,18 @@
             ClientSize = new Size(808, 473);
             Controls.Add(voltar_telalogin);
             Controls.Add(msk_txb_cpf);
-            Controls.Add(label6);
+            Controls.Add(lbl_cpf);
             Controls.Add(txb_nome);
-            Controls.Add(label5);
-            Controls.Add(label4);
+            Controls.Add(lbl_nome);
+            Controls.Add(lbl_csenha);
             Controls.Add(txb_confirmar_senha);
             Controls.Add(btn_cadastrar);
             Controls.Add(pictureBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lbl_senha);
+            Controls.Add(lbl_email);
             Controls.Add(txb_senha);
             Controls.Add(txb_email);
-            Controls.Add(label1);
+            Controls.Add(lbl_cc);
             Name = "CadastroForm";
             Text = "Tela de Cadastro";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -220,18 +223,18 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbl_cc;
         private TextBox txb_email;
         private TextBox txb_senha;
-        private Label label2;
-        private Label label3;
+        private Label lbl_email;
+        private Label lbl_senha;
         private PictureBox pictureBox1;
         private Button btn_cadastrar;
         private TextBox txb_confirmar_senha;
-        private Label label4;
-        private Label label5;
+        private Label lbl_csenha;
+        private Label lbl_nome;
         private TextBox txb_nome;
-        private Label label6;
+        private Label lbl_cpf;
         private MaskedTextBox msk_txb_cpf;
         private LinkLabel voltar_telalogin;
     }
