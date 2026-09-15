@@ -23,5 +23,10 @@ namespace ReciclagemQuePaga.Data
         {
             return _context.Usuarios.Find(id);
         }
+
+        public Usuario? BuscarPorEmail(string email)
+        {
+            return _context.Usuarios.FirstOrDefault(u => u.EmailUsuario == email);
+        }
     }
 }
