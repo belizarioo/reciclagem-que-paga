@@ -76,9 +76,9 @@ namespace ReciclagemQuePaga.Forms
 
         private void voltar_telalogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            LoginForm form = (LoginForm)Application.OpenForms["loginForm"];
+            LoginForm form1 = (LoginForm)Application.OpenForms["loginForm"];
 
-            if (form == null)
+            if (form1 == null)
             {
                 form = new LoginForm(_service);
                 form.Name = "loginForm";
@@ -89,9 +89,12 @@ namespace ReciclagemQuePaga.Forms
             }
             else
             {
-                form.Activate();
-                //form.Show();
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
             }
+
+            this.Hide();
         }
 
         private void txb_email_TextChanged(object sender, EventArgs e)
