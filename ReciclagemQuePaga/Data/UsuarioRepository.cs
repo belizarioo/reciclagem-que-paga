@@ -26,7 +26,7 @@ namespace ReciclagemQuePaga.Data
 
         public Usuario? BuscarPorEmail(string email)
         {
-            return _context.Usuarios.FirstOrDefault(u => u.EmailUsuario == email);
+            return _context.Usuarios.FirstOrDefault(u => u.email_usuario == email);
         }
     }
 }
