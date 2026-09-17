@@ -127,6 +127,7 @@
             link_cadastro.Text = "Faça seu cadastro aqui!";
             link_cadastro.TextAlign = ContentAlignment.MiddleCenter;
             link_cadastro.VisitedLinkColor = Color.FromArgb(40, 40, 40);
+            link_cadastro.LinkClicked += link_cadastro_LinkClicked;
             // 
             // lbl_email
             // 
