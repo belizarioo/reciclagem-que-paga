@@ -7,11 +7,8 @@ namespace ReciclagemQuePaga
     public partial class LoginForm : Form
     {
         private readonly UsuarioService _service;
-        
-        //string email { get; set; }
-        //string senha { get; set; }
 
-        
+
         public LoginForm(UsuarioService service)
         {
             _service = service;
@@ -75,7 +72,7 @@ namespace ReciclagemQuePaga
                 MessageBox.Show("Usuario não encontrado, tente um email diferente");
                 LimparCampos();
             }
-        } 
+        }
 
 
 
@@ -97,7 +94,7 @@ namespace ReciclagemQuePaga
 
             if (form1 == null)
             {
-                form1 = new CadastroForm();
+                form1 = new CadastroForm(_service);
                 form1.Name = "cadastroForm";
                 form1.Show();
             }
@@ -110,8 +107,6 @@ namespace ReciclagemQuePaga
 
             this.Hide();
         }
-
-    
     }
 
 
