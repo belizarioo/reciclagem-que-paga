@@ -1,12 +1,14 @@
 ﻿using Microsoft.Identity.Client;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 public class Usuario
 {
-    public int UsuarioId { get; set; }
-    public string NomeUsuario { get; set; } = String.Empty;
-    public string EmailUsuario { get; set; } = String.Empty;
-    public string SenhaUsuario { get; set; } = String.Empty;
-    public string CpfUsuario { get; set; } = String.Empty;
+    [Key]
+    public int usuario_id { get; set; }
+    public string nome_usuario { get; set; } = String.Empty;
+    public string email_usuario { get; set; } = String.Empty;
+    public string senha_usuario { get; set; } = String.Empty;
+    public string cpf_usuario { get; set; } = String.Empty;
 	
 }

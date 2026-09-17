@@ -1,17 +1,20 @@
 using ReciclagemQuePaga.Forms;
+using ReciclagemQuePaga;
+using ReciclagemQuePaga.Services;
 
 namespace ReciclagemQuePaga
 {
     public partial class LoginForm : Form
     {
-
+        private readonly UsuarioService _service;
+        
         //string email { get; set; }
         //string senha { get; set; }
 
-        string email = "Gui";
-        string senha = "123";
-        public LoginForm()
+        
+        public LoginForm(UsuarioService service)
         {
+            _service = service;
             InitializeComponent();
         }
 
@@ -36,40 +39,43 @@ namespace ReciclagemQuePaga
 
         private void btn_entrar_Click(object sender, EventArgs e)
         {
-            email = txb_email.Text;
-            senha = txb_senha.Text;
+            string email = txb_email.Text;
+            string senha = txb_senha.Text;
 
+            Usuario? usuario = _service.BuscarPorEmail(email);
 
-            if (email == "Gui" && senha == "123")
+            if (usuario != null)
             {
-                txb_email.Text = email;
-                txb_senha.Text = senha;
-
-
-
-                TelaInicial form = (TelaInicial)Application.OpenForms["telaInicial"];
-
-                if (form == null)
+                if (senha == usuario.senha_usuario)
                 {
-                    form = new TelaInicial();
-                    form.Name = "telaInicial";
-                    form.Show();
-                    this.Hide();
+                    TelaInicial form = (TelaInicial)Application.OpenForms["telaInicial"];
 
+                    if (form == null)
+                    {
+                        form = new TelaInicial();
+                        form.Name = "telaInicial";
+                        form.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        form.Activate();
+                        //form.Show();
+                    }
                 }
                 else
                 {
-                    form.Activate();
-                    //form.Show();
+                    MessageBox.Show("Senha incorreta");
+                    txb_senha.Clear();
                 }
             }
-
             else
             {
-                MessageBox.Show("Email ou senha incorretos. Tente novamente.");
+                MessageBox.Show("Usuario não encontrado, tente um email diferente");
                 LimparCampos();
             }
-        }
+        } 
 
 
 
