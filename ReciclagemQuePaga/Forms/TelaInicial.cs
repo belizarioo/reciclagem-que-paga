@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReciclagemQuePaga.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,13 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class TelaInicial : Form
     {
+        private readonly UsuarioService _service; 
+
+        public TelaInicial(UsuarioService service)
+        {
+            InitializeComponent();
+            _service = service;
+        }
         public TelaInicial()
         {
             InitializeComponent();
@@ -187,7 +195,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new LoginForm();
+                form1 = new LoginForm(_service);
                 form1.Name = "loginForm";
                 form1.Show();
             }

@@ -80,9 +80,9 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form = new LoginForm(_service);
-                form.Name = "loginForm";
-                form.Show();
+                form1 = new LoginForm(_service);
+                form1.Name = "loginForm";
+                form1.Show();
                 this.Hide();
 
 
