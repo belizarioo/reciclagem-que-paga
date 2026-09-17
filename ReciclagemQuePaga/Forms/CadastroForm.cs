@@ -30,22 +30,22 @@ namespace ReciclagemQuePaga.Forms
 
         private void voltar_telalogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            LoginForm form = (LoginForm)Application.OpenForms["loginForm"];
+            LoginForm form1 = (LoginForm)Application.OpenForms["loginForm"];
 
-            if (form == null)
+            if (form1 == null)
             {
-                form = new LoginForm();
-                form.Name = "loginForm";
-                form.Show();
-                this.Hide();
-
-
+                form1 = new LoginForm();
+                form1.Name = "loginForm";
+                form1.Show();
             }
             else
             {
-                form.Activate();
-                //form.Show();
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
             }
+
+            this.Hide();
         }
 
         private void txb_email_TextChanged(object sender, EventArgs e)

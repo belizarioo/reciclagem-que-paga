@@ -42,14 +42,14 @@
             btn_maquina = new Button();
             flowLayoutPanel4 = new FlowLayoutPanel();
             pictureBox3 = new PictureBox();
-            button1 = new Button();
+            btn_historico = new Button();
             flowLayoutPanel5 = new FlowLayoutPanel();
             pictureBox4 = new PictureBox();
-            button2 = new Button();
+            btn_saldo = new Button();
             flowLayoutPanel6 = new FlowLayoutPanel();
             flowLayoutPanel7 = new FlowLayoutPanel();
             pictureBox5 = new PictureBox();
-            button3 = new Button();
+            btn_sair = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             painel_principal = new Panel();
             label5 = new Label();
@@ -212,11 +212,12 @@
             btn_maquina.TabIndex = 5;
             btn_maquina.Text = "Máquina";
             btn_maquina.UseVisualStyleBackColor = true;
+            btn_maquina.Click += btn_maquina_Click;
             // 
             // flowLayoutPanel4
             // 
             flowLayoutPanel4.Controls.Add(pictureBox3);
-            flowLayoutPanel4.Controls.Add(button1);
+            flowLayoutPanel4.Controls.Add(btn_historico);
             flowLayoutPanel4.Location = new Point(3, 90);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Size = new Size(153, 40);
@@ -232,23 +233,24 @@
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
-            // button1
+            // btn_historico
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Window;
-            button1.Location = new Point(43, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(104, 32);
-            button1.TabIndex = 5;
-            button1.Text = "Histórico";
-            button1.UseVisualStyleBackColor = true;
+            btn_historico.FlatAppearance.BorderSize = 0;
+            btn_historico.FlatStyle = FlatStyle.Flat;
+            btn_historico.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_historico.ForeColor = SystemColors.Window;
+            btn_historico.Location = new Point(43, 3);
+            btn_historico.Name = "btn_historico";
+            btn_historico.Size = new Size(104, 32);
+            btn_historico.TabIndex = 5;
+            btn_historico.Text = "Histórico";
+            btn_historico.UseVisualStyleBackColor = true;
+            btn_historico.Click += btn_historico_Click;
             // 
             // flowLayoutPanel5
             // 
             flowLayoutPanel5.Controls.Add(pictureBox4);
-            flowLayoutPanel5.Controls.Add(button2);
+            flowLayoutPanel5.Controls.Add(btn_saldo);
             flowLayoutPanel5.Location = new Point(3, 136);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Size = new Size(153, 40);
@@ -264,18 +266,19 @@
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
-            // button2
+            // btn_saldo
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Trebuchet MS", 9F);
-            button2.ForeColor = SystemColors.Window;
-            button2.Location = new Point(43, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(104, 32);
-            button2.TabIndex = 5;
-            button2.Text = "Consultar saldo";
-            button2.UseVisualStyleBackColor = true;
+            btn_saldo.FlatAppearance.BorderSize = 0;
+            btn_saldo.FlatStyle = FlatStyle.Flat;
+            btn_saldo.Font = new Font("Trebuchet MS", 9F);
+            btn_saldo.ForeColor = SystemColors.Window;
+            btn_saldo.Location = new Point(43, 3);
+            btn_saldo.Name = "btn_saldo";
+            btn_saldo.Size = new Size(104, 32);
+            btn_saldo.TabIndex = 5;
+            btn_saldo.Text = "Consultar saldo";
+            btn_saldo.UseVisualStyleBackColor = true;
+            btn_saldo.Click += btn_saldo_Click;
             // 
             // flowLayoutPanel6
             // 
@@ -283,11 +286,12 @@
             flowLayoutPanel6.Name = "flowLayoutPanel6";
             flowLayoutPanel6.Size = new Size(153, 181);
             flowLayoutPanel6.TabIndex = 6;
+            flowLayoutPanel6.Paint += flowLayoutPanel6_Paint;
             // 
             // flowLayoutPanel7
             // 
             flowLayoutPanel7.Controls.Add(pictureBox5);
-            flowLayoutPanel7.Controls.Add(button3);
+            flowLayoutPanel7.Controls.Add(btn_sair);
             flowLayoutPanel7.Location = new Point(3, 369);
             flowLayoutPanel7.Name = "flowLayoutPanel7";
             flowLayoutPanel7.Size = new Size(153, 49);
@@ -303,18 +307,19 @@
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
-            // button3
+            // btn_sair
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.Window;
-            button3.Location = new Point(43, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(91, 30);
-            button3.TabIndex = 1;
-            button3.Text = "Sair";
-            button3.UseVisualStyleBackColor = true;
+            btn_sair.FlatAppearance.BorderSize = 0;
+            btn_sair.FlatStyle = FlatStyle.Flat;
+            btn_sair.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_sair.ForeColor = SystemColors.Window;
+            btn_sair.Location = new Point(43, 3);
+            btn_sair.Name = "btn_sair";
+            btn_sair.Size = new Size(91, 30);
+            btn_sair.TabIndex = 1;
+            btn_sair.Text = "Sair";
+            btn_sair.UseVisualStyleBackColor = true;
+            btn_sair.Click += btn_sair_Click;
             // 
             // timer1
             // 
@@ -480,6 +485,7 @@
             btn_maquina2.TabIndex = 0;
             btn_maquina2.Text = "Acessar";
             btn_maquina2.UseVisualStyleBackColor = false;
+            btn_maquina2.Click += btn_maquina2_Click;
             // 
             // label3
             // 
@@ -562,6 +568,7 @@
             btn_historico2.TabIndex = 1;
             btn_historico2.Text = "Acessar";
             btn_historico2.UseVisualStyleBackColor = false;
+            btn_historico2.Click += btn_historico2_Click;
             // 
             // painel_saldo
             // 
@@ -632,6 +639,7 @@
             btn_saldo2.TabIndex = 2;
             btn_saldo2.Text = "Acessar";
             btn_saldo2.UseVisualStyleBackColor = false;
+            btn_saldo2.Click += btn_saldo2_Click;
             // 
             // TelaInicial
             // 
@@ -703,14 +711,14 @@
         private Button btn_maquina;
         private FlowLayoutPanel flowLayoutPanel4;
         private PictureBox pictureBox3;
-        private Button button1;
+        private Button btn_historico;
         private FlowLayoutPanel flowLayoutPanel5;
         private PictureBox pictureBox4;
-        private Button button2;
+        private Button btn_saldo;
         private FlowLayoutPanel flowLayoutPanel6;
         private FlowLayoutPanel flowLayoutPanel7;
         private PictureBox pictureBox5;
-        private Button button3;
+        private Button btn_sair;
         private PictureBox pictureBox6;
         private Label label5;
         private PictureBox pictureBox7;

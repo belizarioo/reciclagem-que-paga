@@ -19,21 +19,42 @@ namespace ReciclagemQuePaga.Forms
 
         private void btn_tI_Click(object sender, EventArgs e)
         {
-            TelaInicial form = (TelaInicial)Application.OpenForms["telaInicial"];
+            TelaInicial form1 = (TelaInicial)Application.OpenForms["telaInicial"];
 
-            if (form == null)
+            if (form1 == null)
             {
-                form = new TelaInicial();
-                form.Name = "telaInicial";
-                form.Show();
-                this.Hide();
-
+                form1 = new TelaInicial();
+                form1.Name = "telaInicial";
+                form1.Show();
             }
             else
             {
-                form.Activate();
-                //form.Show();
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
             }
+
+            this.Hide();
+        }
+
+        private void btn_ver_Click(object sender, EventArgs e)
+        {
+            Historico form1 = (Historico)Application.OpenForms["historico"];
+
+            if (form1 == null)
+            {
+                form1 = new Historico();
+                form1.Name = "historico";
+                form1.Show();
+            }
+            else
+            {
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
+            }
+
+            this.Hide();
         }
     }
 }
