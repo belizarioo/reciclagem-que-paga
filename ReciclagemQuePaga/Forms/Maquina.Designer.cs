@@ -62,9 +62,9 @@
             // 
             pic_img.BackColor = Color.DarkSeaGreen;
             pic_img.Image = (Image)resources.GetObject("pic_img.Image");
-            pic_img.Location = new Point(526, 107);
+            pic_img.Location = new Point(505, 125);
             pic_img.Name = "pic_img";
-            pic_img.Size = new Size(195, 190);
+            pic_img.Size = new Size(230, 218);
             pic_img.SizeMode = PictureBoxSizeMode.Zoom;
             pic_img.TabIndex = 0;
             pic_img.TabStop = false;
