@@ -32,9 +32,9 @@
             label2 = new Label();
             btn_tI = new Button();
             panel1 = new Panel();
-            pic_carteira = new PictureBox();
-            lbl_S = new Label();
             lbl_saldo = new Label();
+            lbl_S = new Label();
+            pic_carteira = new PictureBox();
             panel4 = new Panel();
             label3 = new Label();
             btn_Resgatar = new Button();
@@ -90,14 +90,14 @@
             panel1.Size = new Size(749, 115);
             panel1.TabIndex = 10;
             // 
-            // pic_carteira
+            // lbl_saldo
             // 
-            pic_carteira.BackColor = Color.DarkSeaGreen;
-            pic_carteira.Location = new Point(598, -12);
-            pic_carteira.Name = "pic_carteira";
-            pic_carteira.Size = new Size(127, 111);
-            pic_carteira.TabIndex = 0;
-            pic_carteira.TabStop = false;
+            lbl_saldo.AutoSize = true;
+            lbl_saldo.Font = new Font("Segoe UI", 15F);
+            lbl_saldo.Location = new Point(23, 55);
+            lbl_saldo.Name = "lbl_saldo";
+            lbl_saldo.Size = new Size(0, 28);
+            lbl_saldo.TabIndex = 2;
             // 
             // lbl_S
             // 
@@ -109,14 +109,14 @@
             lbl_S.TabIndex = 1;
             lbl_S.Text = "Saldo disponivel:";
             // 
-            // lbl_saldo
+            // pic_carteira
             // 
-            lbl_saldo.AutoSize = true;
-            lbl_saldo.Font = new Font("Segoe UI", 15F);
-            lbl_saldo.Location = new Point(23, 55);
-            lbl_saldo.Name = "lbl_saldo";
-            lbl_saldo.Size = new Size(0, 28);
-            lbl_saldo.TabIndex = 2;
+            pic_carteira.BackColor = Color.DarkSeaGreen;
+            pic_carteira.Location = new Point(598, -12);
+            pic_carteira.Name = "pic_carteira";
+            pic_carteira.Size = new Size(127, 111);
+            pic_carteira.TabIndex = 0;
+            pic_carteira.TabStop = false;
             // 
             // panel4
             // 
@@ -182,6 +182,7 @@
             btn_ver.TabIndex = 6;
             btn_ver.Text = "Ver extrato";
             btn_ver.UseVisualStyleBackColor = true;
+            btn_ver.Click += btn_ver_Click;
             // 
             // pic_ex
             // 

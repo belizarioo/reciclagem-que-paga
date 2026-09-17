@@ -109,6 +109,169 @@ namespace ReciclagemQuePaga.Forms
 
         }
 
-        
+        private void btn_maquina_Click(object sender, EventArgs e)
+        {
+
+            Maquina form = (Maquina)Application.OpenForms["maquina"];
+
+
+
+            if (form == null)
+            {
+                form = new Maquina();
+                form.Name = "maquina";
+                form.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+                form.Activate();
+            }
+
+            this.Hide();
+        }
+
+        private void btn_historico_Click(object sender, EventArgs e)
+        {
+
+
+            Historico form = (Historico)Application.OpenForms["historico"];
+
+
+
+            if (form == null)
+            {
+                form = new Historico();
+                form.Name = "historico";
+                form.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+                form.Activate();
+            }
+
+            this.Hide();
+        }
+
+        private void btn_saldo_Click(object sender, EventArgs e)
+        {
+
+
+            Saldo form = (Saldo)Application.OpenForms["saldo"];
+
+
+
+            if (form == null)
+            {
+                form = new Saldo();
+                form.Name = "saldo";
+                form.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+                form.Activate();
+            }
+
+            this.Hide();
+        }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+
+            LoginForm form1 = (LoginForm)Application.OpenForms["loginForm"];
+
+            if (form1 == null)
+            {
+                form1 = new LoginForm();
+                form1.Name = "loginForm";
+                form1.Show();
+            }
+            else
+            {
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
+            }
+
+            this.Hide();
+
+        }
+
+        private void btn_maquina2_Click(object sender, EventArgs e)
+        {
+
+            Maquina form = (Maquina)Application.OpenForms["maquina"];
+
+
+
+            if (form == null)
+            {
+                form = new Maquina();
+                form.Name = "maquina";
+                form.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+                form.Activate();
+            }
+
+            this.Hide();
+        }
+
+        private void btn_historico2_Click(object sender, EventArgs e)
+        {
+            Historico form = (Historico)Application.OpenForms["historico"];
+
+
+
+            if (form == null)
+            {
+                form = new Historico();
+                form.Name = "historico";
+                form.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+                form.Activate();
+            }
+
+            this.Hide();
+        }
+
+        private void btn_saldo2_Click(object sender, EventArgs e)
+        {
+            Saldo form = (Saldo)Application.OpenForms["saldo"];
+
+
+
+            if (form == null)
+            {
+                form = new Saldo();
+                form.Name = "saldo";
+                form.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+                form.Activate();
+            }
+
+            this.Hide();
+        }
+
+        private void flowLayoutPanel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
