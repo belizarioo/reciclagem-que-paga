@@ -18,6 +18,11 @@ namespace ReciclagemQuePaga
             InitializeComponent();
         }
 
+        public LoginForm()
+        {
+            InitializeComponent();
+        }
+
         public void LimparCampos()
         {
             txb_email.Clear();
@@ -27,7 +32,7 @@ namespace ReciclagemQuePaga
         private void LoginForm_Load(object sender, EventArgs e)
         {
             //txb_senha.UseSystemPasswordChar = true;
-            txb_senha.PasswordChar = '●';
+            txb_senha.PasswordChar = '*';
         }
 
         private void Form1_Load(object sender, EventArgs e)
