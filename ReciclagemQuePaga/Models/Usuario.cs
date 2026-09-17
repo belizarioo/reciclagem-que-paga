@@ -11,4 +11,15 @@ public class Usuario
     public string senha_usuario { get; set; } = String.Empty;
     public string cpf_usuario { get; set; } = String.Empty;
 	
+    public Usuario()
+    {
+
+    }
+    public Usuario(string nome, string email, string senha, string cpf)
+    {
+        nome_usuario = nome;
+        email_usuario = email;
+        senha_usuario = senha;
+        cpf_usuario = cpf;
+    }
 }

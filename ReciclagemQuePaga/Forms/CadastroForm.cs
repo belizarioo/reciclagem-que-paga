@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReciclagemQuePaga.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace ReciclagemQuePaga.Forms
 {
     public partial class CadastroForm : Form
     {
+        private readonly UsuarioService _service;
 
-        public CadastroForm()
+        public CadastroForm(UsuarioService service)
         {
+            _service = service;
             InitializeComponent();
         }
 
@@ -25,7 +29,49 @@ namespace ReciclagemQuePaga.Forms
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
+            
 
+            foreach (Control c in Controls)
+            {
+                if ((c is TextBox || c is MaskedTextBox) && String.IsNullOrWhiteSpace(c.Text))
+                {
+                    MessageBox.Show("Preencha todos os campos obrigatórios!");
+                    return;
+                }
+                continue;
+            }
+
+            if (!msk_txb_cpf.MaskCompleted)
+            {
+                MessageBox.Show("Preencha o CPF corretamente com todos os 11 dígitos!");
+                return;
+            }
+
+            string nome = txb_nome.Text;
+            string cpf = msk_txb_cpf.Text.Replace(".", "").Replace("-", "").Trim();
+            string email = txb_email.Text;
+            string senha = txb_senha.Text;
+
+            if(txb_confirmar_senha.Text != senha)
+            {
+                MessageBox.Show("As senhas digitas não coincidem!");
+                return;
+            }
+
+            try
+            {
+                _service.CadastroUsuario(new Usuario(nome, email, senha, cpf));
+                MessageBox.Show("Usuario Cadastrado com sucesso");
+
+                LoginForm loginForm = new LoginForm(_service);
+                loginForm.Show();
+                this.Hide();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Erro ao realizar o cadastro: {ex.Message}");
+            }
+            
         }
 
         private void voltar_telalogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -34,7 +80,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new LoginForm();
+                form = new LoginForm(_service);
                 form.Name = "loginForm";
                 form.Show();
                 this.Hide();
