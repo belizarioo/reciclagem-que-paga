@@ -56,5 +56,7 @@ namespace ReciclagemQuePaga.Forms
 
             this.Hide();
         }
+
+       
     }
 }
