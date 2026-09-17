@@ -85,7 +85,27 @@ namespace ReciclagemQuePaga
             }
         }
 
-     
+        private void link_cadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroForm form1 = (CadastroForm)Application.OpenForms["cadastroForm"];
+
+            if (form1 == null)
+            {
+                form1 = new CadastroForm();
+                form1.Name = "cadastroForm";
+                form1.Show();
+            }
+            else
+            {
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
+            }
+
+            this.Hide();
+        }
+
+    
     }
 
 

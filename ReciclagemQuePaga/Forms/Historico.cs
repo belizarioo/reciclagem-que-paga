@@ -16,5 +16,25 @@ namespace ReciclagemQuePaga.Forms
         {
             InitializeComponent();
         }
+
+        private void btn_tI_Click(object sender, EventArgs e)
+        {
+            TelaInicial form1 = (TelaInicial)Application.OpenForms["telaInicial"];
+
+            if (form1 == null)
+            {
+                form1 = new TelaInicial();
+                form1.Name = "telaInicial";
+                form1.Show();
+            }
+            else
+            {
+                form1.Show();
+                form1.BringToFront();
+                form1.Activate();
+            }
+
+            this.Hide();
+        }
     }
 }
