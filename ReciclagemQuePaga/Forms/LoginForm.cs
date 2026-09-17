@@ -26,8 +26,16 @@ namespace ReciclagemQuePaga
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            txb_senha.UseSystemPasswordChar = true;
+            //txb_senha.UseSystemPasswordChar = true;
+            txb_senha.PasswordChar = '●';
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Remove o foco inicial dos campos
+            this.ActiveControl = null;
+        }
+
 
         private void btn_entrar_Click(object sender, EventArgs e)
         {
@@ -69,26 +77,23 @@ namespace ReciclagemQuePaga
             }
         } 
 
+
+
         private void cb_senha_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_senha.Checked == true )
+            if (cb_senha.Checked)
             {
-                txb_senha.UseSystemPasswordChar = false;
+                txb_senha.PasswordChar = '\0';
             }
             else
             {
-                txb_senha.UseSystemPasswordChar = true;
-            }
-            {
-
+                txb_senha.PasswordChar = '●';
             }
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-      
+     
     }
+
+
 }
+

@@ -15,7 +15,14 @@ namespace ReciclagemQuePaga.Forms
         public TelaInicial()
         {
             InitializeComponent();
+
+            string usuarioLogado = "Guilherme";
+            int saldo = 500;
+
+            lbl_saldo.Text = $"R$ {saldo}";
+            lbl_nU.Text = "Olá, " + usuarioLogado + "!";
         }
+
 
 
         bool menuAberto = true;
@@ -39,6 +46,8 @@ namespace ReciclagemQuePaga.Forms
                 {
                     timer1.Stop();
                 }
+
+
             }
         }
 
@@ -59,5 +68,47 @@ namespace ReciclagemQuePaga.Forms
         {
             Application.Exit();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_inicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_lateral_Paint(object sender, PaintEventArgs e)
+        {
+            menu_lateral.Dock = DockStyle.Left;
+        }
+
+        private void painel_principal_Paint(object sender, PaintEventArgs e)
+        {
+            painel_principal.Dock = DockStyle.Fill;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void painel_maquina_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbl_nU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
