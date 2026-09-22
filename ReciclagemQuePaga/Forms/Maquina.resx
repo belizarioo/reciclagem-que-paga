@@ -235,10 +235,10 @@
         //9QsWCD613VCgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_confirmar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANPSURBVFhHtVbP
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANPSURBVFhHtVbP
         S1RRFP78XZiBgmDkQkIDF6XhxoXoxp1uFDLDjf+B/gVCm4JoXWa1cuHKRQuleW9MK3VMJScMFQ0Ex8of
         5M/RdEbnxLnPH/POfaPPGf3gg8e93z3fefe+d+4B3KIXN2HgMQy8gYFRGFiBgdAR+XkUHnTAg0a8R5Zc
         Hj+8uAsT72BgBwbIJVn7FgaKZDj3GMZ1GHgBA2EHA7cMwcRz9OOaDH82OHMDkw4B46UPH3BL2jjDxIOj

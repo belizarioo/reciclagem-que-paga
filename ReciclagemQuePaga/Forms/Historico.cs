@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReciclagemQuePaga.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class Historico : Form
     {
-        public Historico()
+        private readonly UsuarioService _usuarioService;
+        private readonly MaterialService _materialService;
+        private readonly TransacaoService _transacaoService;
+        private readonly Usuario _usuarioLogado;
+
+        public Historico(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService, Usuario usuarioLogado)
         {
             InitializeComponent();
+            _usuarioService = usuarioService;
+            _materialService = materialService;
+            _transacaoService = transacaoService;
+            _usuarioLogado = usuarioLogado;
         }
 
         private void btn_tI_Click(object sender, EventArgs e)
@@ -23,7 +33,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new TelaInicial();
+                form1 = new TelaInicial(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form1.Name = "telaInicial";
                 form1.Show();
             }

@@ -16,11 +16,17 @@ namespace ReciclagemQuePaga
             // see https://aka.ms/applicationconfiguration.
 
             var context = new DataBaseConnection();
+
+            var repositoryMaterial = new MaterialRepository(context);
+            var repositoryTransacao = new TransacaoRepository(context);
             var repositoryUser = new UsuarioRepository(context);
+
+            var serviceMaterial = new MaterialService(repositoryMaterial);
+            var serviceTransacao = new TransacaoService(repositoryTransacao, repositoryMaterial);
             var serviceUser = new UsuarioService(repositoryUser);
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm(serviceUser));
+            Application.Run(new LoginForm(serviceUser, serviceMaterial, serviceTransacao));
         }
     }
 }
