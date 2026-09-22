@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historico));
             dgw_historico = new DataGridView();
-            btn_tI = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label6 = new Label();
             dh = new DataGridViewTextBoxColumn();
             material = new DataGridViewTextBoxColumn();
             peso = new DataGridViewTextBoxColumn();
             valor = new DataGridViewTextBoxColumn();
+            btn_tI = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label6 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgw_historico).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -48,36 +48,63 @@
             // 
             // dgw_historico
             // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(244, 247, 244);
-            dgw_historico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(244, 247, 244);
+            dgw_historico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgw_historico.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgw_historico.BackgroundColor = Color.White;
             dgw_historico.BorderStyle = BorderStyle.None;
             dgw_historico.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 77, 46);
-            dataGridViewCellStyle5.Font = new Font("Trebuchet MS", 10F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgw_historico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 77, 46);
+            dataGridViewCellStyle2.Font = new Font("Trebuchet MS", 10F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgw_historico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgw_historico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgw_historico.Columns.AddRange(new DataGridViewColumn[] { dh, material, peso, valor });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgw_historico.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgw_historico.DefaultCellStyle = dataGridViewCellStyle3;
             dgw_historico.EnableHeadersVisualStyles = false;
             dgw_historico.Location = new Point(12, 119);
             dgw_historico.Name = "dgw_historico";
             dgw_historico.RowHeadersVisible = false;
             dgw_historico.Size = new Size(776, 299);
             dgw_historico.TabIndex = 0;
+            // 
+            // dh
+            // 
+            dh.FillWeight = 140F;
+            dh.HeaderText = "Data e hora";
+            dh.Name = "dh";
+            dh.ReadOnly = true;
+            // 
+            // material
+            // 
+            material.HeaderText = "Material";
+            material.Name = "material";
+            material.ReadOnly = true;
+            // 
+            // peso
+            // 
+            peso.FillWeight = 80F;
+            peso.HeaderText = "Peso";
+            peso.Name = "peso";
+            peso.ReadOnly = true;
+            // 
+            // valor
+            // 
+            valor.FillWeight = 80F;
+            valor.HeaderText = "Valor";
+            valor.Name = "valor";
+            valor.ReadOnly = true;
             // 
             // btn_tI
             // 
@@ -121,33 +148,6 @@
             label6.TabIndex = 17;
             label6.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
-            // dh
-            // 
-            dh.FillWeight = 140F;
-            dh.HeaderText = "Data e hora";
-            dh.Name = "dh";
-            dh.ReadOnly = true;
-            // 
-            // material
-            // 
-            material.HeaderText = "Material";
-            material.Name = "material";
-            material.ReadOnly = true;
-            // 
-            // peso
-            // 
-            peso.FillWeight = 80F;
-            peso.HeaderText = "Peso";
-            peso.Name = "peso";
-            peso.ReadOnly = true;
-            // 
-            // valor
-            // 
-            valor.FillWeight = 80F;
-            valor.HeaderText = "Valor";
-            valor.Name = "valor";
-            valor.ReadOnly = true;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -170,6 +170,7 @@
             Controls.Add(label1);
             Controls.Add(btn_tI);
             Controls.Add(dgw_historico);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Historico";
             Text = "Histórico";
             ((System.ComponentModel.ISupportInitialize)dgw_historico).EndInit();

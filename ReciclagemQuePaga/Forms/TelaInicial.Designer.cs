@@ -54,9 +54,6 @@
             painel_principal = new Panel();
             label5 = new Label();
             pictureBox6 = new PictureBox();
-            painel_Msaldo = new Panel();
-            lbl_saldo = new Label();
-            lbl_sL = new Label();
             lbl_nU = new Label();
             flow = new FlowLayoutPanel();
             painel_simula = new Panel();
@@ -93,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             painel_principal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            painel_Msaldo.SuspendLayout();
             flow.SuspendLayout();
             painel_simula.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -144,7 +140,7 @@
             menu_lateral.Dock = DockStyle.Left;
             menu_lateral.Location = new Point(0, 29);
             menu_lateral.Name = "menu_lateral";
-            menu_lateral.Size = new Size(156, 421);
+            menu_lateral.Size = new Size(156, 424);
             menu_lateral.TabIndex = 1;
             menu_lateral.Paint += menu_lateral_Paint;
             // 
@@ -331,7 +327,6 @@
             painel_principal.BackColor = Color.WhiteSmoke;
             painel_principal.Controls.Add(label5);
             painel_principal.Controls.Add(pictureBox6);
-            painel_principal.Controls.Add(painel_Msaldo);
             painel_principal.Controls.Add(lbl_nU);
             painel_principal.Controls.Add(flow);
             painel_principal.Location = new Point(156, 29);
@@ -344,7 +339,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(275, 403);
+            label5.Location = new Point(279, 406);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(357, 15);
@@ -359,36 +354,6 @@
             pictureBox6.Size = new Size(38, 38);
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
-            // 
-            // painel_Msaldo
-            // 
-            painel_Msaldo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            painel_Msaldo.Controls.Add(lbl_saldo);
-            painel_Msaldo.Controls.Add(lbl_sL);
-            painel_Msaldo.Location = new Point(461, 6);
-            painel_Msaldo.Name = "painel_Msaldo";
-            painel_Msaldo.Size = new Size(172, 52);
-            painel_Msaldo.TabIndex = 2;
-            // 
-            // lbl_saldo
-            // 
-            lbl_saldo.AutoSize = true;
-            lbl_saldo.Font = new Font("Segoe UI", 12F);
-            lbl_saldo.Location = new Point(20, 24);
-            lbl_saldo.Name = "lbl_saldo";
-            lbl_saldo.Size = new Size(0, 21);
-            lbl_saldo.TabIndex = 1;
-            // 
-            // lbl_sL
-            // 
-            lbl_sL.AutoSize = true;
-            lbl_sL.Font = new Font("Trebuchet MS", 12F);
-            lbl_sL.ForeColor = SystemColors.MenuText;
-            lbl_sL.Location = new Point(3, 2);
-            lbl_sL.Name = "lbl_sL";
-            lbl_sL.Size = new Size(87, 22);
-            lbl_sL.TabIndex = 0;
-            lbl_sL.Text = "Saldo atual";
             // 
             // lbl_nU
             // 
@@ -645,10 +610,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(792, 450);
+            ClientSize = new Size(792, 453);
             Controls.Add(painel_principal);
             Controls.Add(menu_lateral);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaInicial";
             Text = "Reciclagem que Paga";
             FormClosed += TelaInicial_FormClosed;
@@ -669,8 +635,6 @@
             painel_principal.ResumeLayout(false);
             painel_principal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            painel_Msaldo.ResumeLayout(false);
-            painel_Msaldo.PerformLayout();
             flow.ResumeLayout(false);
             painel_simula.ResumeLayout(false);
             painel_simula.PerformLayout();
@@ -700,9 +664,6 @@
         private Panel painel_saldo;
         private Button btn_saldo2;
         private Label lbl_nU;
-        private Panel painel_Msaldo;
-        private Label lbl_sL;
-        private Label lbl_saldo;
         private FlowLayoutPanel flowLayoutPanel2;
         private PictureBox pictureBox1;
         private Button btn_início;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saldo));
             label1 = new Label();
             label2 = new Label();
             btn_tI = new Button();
@@ -38,37 +39,39 @@
             panel4 = new Panel();
             label3 = new Label();
             btn_Resgatar = new Button();
-            pic_sal = new PictureBox();
             panel2 = new Panel();
             label4 = new Label();
             btn_ver = new Button();
-            pic_ex = new PictureBox();
+            label5 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_carteira).BeginInit();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pic_sal).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pic_ex).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(12, 16);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Trebuchet MS", 25F);
+            label1.Location = new Point(12, 24);
             label1.Name = "label1";
-            label1.Size = new Size(103, 28);
+            label1.Size = new Size(172, 43);
             label1.TabIndex = 0;
-            label1.Text = "Meu saldo";
+            label1.Text = "Meu Saldo";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 50);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Trebuchet MS", 12F);
+            label2.Location = new Point(12, 67);
             label2.Name = "label2";
-            label2.Size = new Size(240, 15);
+            label2.Size = new Size(318, 22);
             label2.TabIndex = 1;
-            label2.Text = "Acompanhe seus ganhos e saldo disponivel.";
+            label2.Text = "Acompanhe seus ganhos e saldo disponível.";
             // 
             // btn_tI
             // 
@@ -82,6 +85,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(27, 77, 46);
             panel1.Controls.Add(lbl_saldo);
             panel1.Controls.Add(lbl_S);
             panel1.Controls.Add(pic_carteira);
@@ -93,28 +97,32 @@
             // lbl_saldo
             // 
             lbl_saldo.AutoSize = true;
-            lbl_saldo.Font = new Font("Segoe UI", 15F);
+            lbl_saldo.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_saldo.ForeColor = Color.White;
             lbl_saldo.Location = new Point(23, 55);
             lbl_saldo.Name = "lbl_saldo";
-            lbl_saldo.Size = new Size(0, 28);
+            lbl_saldo.Size = new Size(0, 40);
             lbl_saldo.TabIndex = 2;
             // 
             // lbl_S
             // 
             lbl_S.AutoSize = true;
-            lbl_S.Font = new Font("Segoe UI", 15F);
-            lbl_S.Location = new Point(23, 13);
+            lbl_S.Font = new Font("Trebuchet MS", 15F);
+            lbl_S.ForeColor = Color.White;
+            lbl_S.Location = new Point(3, 1);
             lbl_S.Name = "lbl_S";
-            lbl_S.Size = new Size(161, 28);
+            lbl_S.Size = new Size(166, 26);
             lbl_S.TabIndex = 1;
-            lbl_S.Text = "Saldo disponivel:";
+            lbl_S.Text = "Saldo disponível:";
             // 
             // pic_carteira
             // 
-            pic_carteira.BackColor = Color.DarkSeaGreen;
-            pic_carteira.Location = new Point(598, -12);
+            pic_carteira.BackColor = Color.Transparent;
+            pic_carteira.Image = (Image)resources.GetObject("pic_carteira.Image");
+            pic_carteira.Location = new Point(569, 3);
             pic_carteira.Name = "pic_carteira";
-            pic_carteira.Size = new Size(127, 111);
+            pic_carteira.Size = new Size(119, 109);
+            pic_carteira.SizeMode = PictureBoxSizeMode.Zoom;
             pic_carteira.TabIndex = 0;
             pic_carteira.TabStop = false;
             // 
@@ -122,10 +130,9 @@
             // 
             panel4.Controls.Add(label3);
             panel4.Controls.Add(btn_Resgatar);
-            panel4.Controls.Add(pic_sal);
-            panel4.Location = new Point(77, 410);
+            panel4.Location = new Point(88, 378);
             panel4.Name = "panel4";
-            panel4.Size = new Size(233, 28);
+            panel4.Size = new Size(233, 41);
             panel4.TabIndex = 11;
             // 
             // label3
@@ -139,30 +146,27 @@
             // 
             // btn_Resgatar
             // 
-            btn_Resgatar.Location = new Point(3, 1);
+            btn_Resgatar.BackColor = Color.FromArgb(27, 77, 46);
+            btn_Resgatar.FlatAppearance.BorderSize = 0;
+            btn_Resgatar.FlatStyle = FlatStyle.Flat;
+            btn_Resgatar.ForeColor = Color.White;
+            btn_Resgatar.Image = (Image)resources.GetObject("btn_Resgatar.Image");
+            btn_Resgatar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_Resgatar.Location = new Point(0, 0);
             btn_Resgatar.Name = "btn_Resgatar";
-            btn_Resgatar.Size = new Size(134, 24);
+            btn_Resgatar.Size = new Size(233, 40);
             btn_Resgatar.TabIndex = 6;
-            btn_Resgatar.Text = "Resgatar Saldo";
-            btn_Resgatar.UseVisualStyleBackColor = true;
-            // 
-            // pic_sal
-            // 
-            pic_sal.BackColor = Color.DarkSeaGreen;
-            pic_sal.Location = new Point(170, 1);
-            pic_sal.Name = "pic_sal";
-            pic_sal.Size = new Size(47, 27);
-            pic_sal.TabIndex = 0;
-            pic_sal.TabStop = false;
+            btn_Resgatar.Text = "              Resgatar Saldo";
+            btn_Resgatar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Resgatar.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             panel2.Controls.Add(label4);
             panel2.Controls.Add(btn_ver);
-            panel2.Controls.Add(pic_ex);
-            panel2.Location = new Point(461, 410);
+            panel2.Location = new Point(485, 378);
             panel2.Name = "panel2";
-            panel2.Size = new Size(233, 28);
+            panel2.Size = new Size(233, 41);
             panel2.TabIndex = 12;
             // 
             // label4
@@ -176,34 +180,58 @@
             // 
             // btn_ver
             // 
-            btn_ver.Location = new Point(96, 1);
+            btn_ver.BackColor = Color.LightGray;
+            btn_ver.FlatAppearance.BorderSize = 0;
+            btn_ver.FlatStyle = FlatStyle.Flat;
+            btn_ver.ForeColor = Color.FromArgb(27, 77, 46);
+            btn_ver.Image = (Image)resources.GetObject("btn_ver.Image");
+            btn_ver.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_ver.Location = new Point(0, 0);
             btn_ver.Name = "btn_ver";
-            btn_ver.Size = new Size(134, 24);
+            btn_ver.Size = new Size(233, 41);
             btn_ver.TabIndex = 6;
-            btn_ver.Text = "Ver extrato";
-            btn_ver.UseVisualStyleBackColor = true;
+            btn_ver.Text = "               Ver Extrato";
+            btn_ver.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_ver.UseVisualStyleBackColor = false;
             btn_ver.Click += btn_ver_Click;
             // 
-            // pic_ex
+            // label5
             // 
-            pic_ex.BackColor = Color.DarkSeaGreen;
-            pic_ex.Location = new Point(16, 3);
-            pic_ex.Name = "pic_ex";
-            pic_ex.Size = new Size(47, 27);
-            pic_ex.TabIndex = 0;
-            pic_ex.TabStop = false;
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Location = new Point(440, 436);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(357, 15);
+            label5.TabIndex = 16;
+            label5.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(190, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(84, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
             // 
             // Saldo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(195, 212, 200);
+            ClientSize = new Size(800, 454);
+            Controls.Add(pictureBox1);
+            Controls.Add(label5);
             Controls.Add(panel2);
             Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(btn_tI);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Saldo";
             Text = "Saldo";
             panel1.ResumeLayout(false);
@@ -211,10 +239,9 @@
             ((System.ComponentModel.ISupportInitialize)pic_carteira).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pic_sal).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pic_ex).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -231,10 +258,10 @@
         private Panel panel4;
         private Label label3;
         private Button btn_Resgatar;
-        private PictureBox pic_sal;
         private Panel panel2;
         private Label label4;
         private Button btn_ver;
-        private PictureBox pic_ex;
+        private Label label5;
+        private PictureBox pictureBox1;
     }
 }

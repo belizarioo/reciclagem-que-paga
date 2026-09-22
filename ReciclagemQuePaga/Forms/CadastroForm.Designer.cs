@@ -215,6 +215,7 @@
             Controls.Add(txb_senha);
             Controls.Add(txb_email);
             Controls.Add(lbl_cc);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroForm";
             Text = "Tela de Cadastro";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -201,6 +201,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(txb_senha);
             Controls.Add(txb_email);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "LoginForm";
             Text = "LoginForm";
