@@ -15,4 +15,11 @@ namespace ReciclagemQuePaga.Models
         public decimal ValorTransacao { get; set; } 
         public decimal PesoTransacao { get; set; }
     }
+    public class HistoricoTransacao
+    {
+        public DateTime DataHora { get; set; }
+        public string Material { get; set; }
+        public decimal Peso { get; set; }
+        public decimal Valor { get; set; }
+    }
 }

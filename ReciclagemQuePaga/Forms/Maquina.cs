@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReciclagemQuePaga.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class Maquina : Form
     {
-        public Maquina()
+        private readonly UsuarioService _service;
+        private readonly TransacaoService _transacaoService;
+
+        public Maquina(UsuarioService service, TransacaoService transacaoService)
         {
             InitializeComponent();
+            _service = service;
+            _transacaoService = transacaoService;
         }
 
         private void limparCampos(object sender, EventArgs e)
@@ -43,7 +49,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new TelaInicial();
+                form1 = new TelaInicial(_service, _transacaoService);
                 form1.Name = "telaInicial";
                 form1.Show();
             }

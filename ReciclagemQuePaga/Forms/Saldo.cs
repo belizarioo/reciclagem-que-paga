@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReciclagemQuePaga.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,12 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class Saldo : Form
     {
-        public Saldo()
+        private readonly UsuarioService _service;
+        private readonly TransacaoService _transacaoService;
+        public Saldo(UsuarioService service, TransacaoService transacaoService)
         {
+            _service = service;
+            _transacaoService = transacaoService;
             InitializeComponent();
         }
 
@@ -23,7 +28,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new TelaInicial();
+                form1 = new TelaInicial(_service, _transacaoService);
                 form1.Name = "telaInicial";
                 form1.Show();
             }
@@ -43,7 +48,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new Historico();
+                form1 = new Historico(_transacaoService, _service);
                 form1.Name = "historico";
                 form1.Show();
             }

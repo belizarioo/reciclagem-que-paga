@@ -1,4 +1,5 @@
-﻿using ReciclagemQuePaga.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ReciclagemQuePaga.Data;
 using ReciclagemQuePaga.Models;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,19 @@ namespace ReciclagemQuePaga.Services
     {
         private readonly TransacaoRepository _repository;
         private readonly MaterialRepository _materialRepository;
+        private readonly DataBaseConnection _context;
+        private TransacaoRepository repositoryTransacao;
 
-        public TransacaoService(TransacaoRepository repository, MaterialRepository materialRepository)
+        public TransacaoService(TransacaoRepository transacaoRepository,MaterialRepository materialRepository, DataBaseConnection context)
         {
-            _repository = repository;
+            _repository = transacaoRepository;
             _materialRepository = materialRepository;
+            _context = context;
+        }
+
+        public TransacaoService(TransacaoRepository repositoryTransacao)
+        {
+            this.repositoryTransacao = repositoryTransacao;
         }
 
         public void RegistrarTransacao(Transacao transacao)
@@ -38,6 +47,12 @@ namespace ReciclagemQuePaga.Services
                 throw new InvalidOperationException("Nenhum material encontrado");
             }
 
+        }
+
+
+        public List<HistoricoTransacao> BuscarHistorico(int usuarioId)
+        {
+            return _repository.BuscarHistorico(usuarioId);
         }
     }
 }

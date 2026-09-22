@@ -26,6 +26,8 @@ namespace ReciclagemQuePaga.Services
             return _repository.BuscarPorEmail(email);
         }
 
+       
+
     }
 
 }

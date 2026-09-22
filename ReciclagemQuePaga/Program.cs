@@ -19,8 +19,11 @@ namespace ReciclagemQuePaga
             var repositoryUser = new UsuarioRepository(context);
             var serviceUser = new UsuarioService(repositoryUser);
 
+            var repositoryTransacao = new TransacaoRepository(context);
+            var serviceTransacao = new TransacaoService(repositoryTransacao);
+
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm(serviceUser));
+            Application.Run(new LoginForm(serviceUser, serviceTransacao));
         }
     }
 }

@@ -15,10 +15,12 @@ namespace ReciclagemQuePaga.Forms
     public partial class CadastroForm : Form
     {
         private readonly UsuarioService _service;
+        private readonly TransacaoService _transacaoService;
 
-        public CadastroForm(UsuarioService service)
+        public CadastroForm(UsuarioService service, TransacaoService transacaoService)
         {
             _service = service;
+            _transacaoService = transacaoService;
             InitializeComponent();
         }
 
@@ -63,7 +65,7 @@ namespace ReciclagemQuePaga.Forms
                 _service.CadastroUsuario(new Usuario(nome, email, senha, cpf));
                 MessageBox.Show("Usuario Cadastrado com sucesso");
 
-                LoginForm loginForm = new LoginForm(_service);
+                LoginForm loginForm = new LoginForm(_service, _transacaoService);
                 loginForm.Show();
                 this.Hide();
             }
@@ -80,7 +82,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new LoginForm(_service);
+                form1 = new LoginForm(_service, _transacaoService);
                 form1.Name = "loginForm";
                 form1.Show();
                 this.Hide();

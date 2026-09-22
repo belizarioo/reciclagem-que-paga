@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ReciclagemQuePaga.Models;
+using ReciclagemQuePaga.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,15 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class Historico : Form
     {
-        public Historico()
+        private readonly TransacaoService _service;
+        private readonly UsuarioService _usuarioService;
+
+        public Historico(TransacaoService service, UsuarioService usuarioService)
         {
+            _service = service;
+            _usuarioService = usuarioService;
             InitializeComponent();
+
         }
 
         private void btn_tI_Click(object sender, EventArgs e)
@@ -23,7 +31,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new TelaInicial();
+                form1 = new TelaInicial(_usuarioService, _service);
                 form1.Name = "telaInicial";
                 form1.Show();
             }
@@ -37,6 +45,32 @@ namespace ReciclagemQuePaga.Forms
             this.Hide();
         }
 
-        
+        private void dgw_historico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void Historico_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("CHEGOU NO LOAD");
+
+            if (_service == null)
+            {
+                MessageBox.Show("SERVICE ESTÁ NULL");
+                return;
+            }
+
+            MessageBox.Show("SERVICE OK");
+
+            int usuarioId = 1;
+
+            List<HistoricoTransacao> historico =
+                _service.BuscarHistorico(usuarioId);
+
+            MessageBox.Show("Quantidade: " + historico.Count);
+
+            dgw_historico.DataSource = historico;
+        }
     }
+    
 }

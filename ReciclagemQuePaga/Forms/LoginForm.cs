@@ -7,11 +7,12 @@ namespace ReciclagemQuePaga
     public partial class LoginForm : Form
     {
         private readonly UsuarioService _service;
+        private readonly TransacaoService _transacaoService;
 
-
-        public LoginForm(UsuarioService service)
+        public LoginForm(UsuarioService service, TransacaoService transacaoService)
         {
             _service = service;
+            _transacaoService = transacaoService;
             InitializeComponent();
         }
 
@@ -54,7 +55,7 @@ namespace ReciclagemQuePaga
 
                     if (form == null)
                     {
-                        form = new TelaInicial();
+                        form = new TelaInicial(_service, _transacaoService);
                         form.Name = "telaInicial";
                         form.Show();
                         this.Hide();
@@ -99,7 +100,7 @@ namespace ReciclagemQuePaga
 
             if (form1 == null)
             {
-                form1 = new CadastroForm(_service);
+                form1 = new CadastroForm(_service, _transacaoService);
                 form1.Name = "cadastroForm";
                 form1.Show();
             }
