@@ -313,6 +313,7 @@
             Controls.Add(txb_peso);
             Controls.Add(cmb_material);
             Controls.Add(pic_img);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Maquina";
             Text = "Máquina";
             Load += Máquina_Load;

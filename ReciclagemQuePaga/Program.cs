@@ -20,7 +20,7 @@ namespace ReciclagemQuePaga
             var serviceUser = new UsuarioService(repositoryUser);
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm(serviceUser));
+            Application.Run(new TelaInicial(serviceUser));
         }
     }
 }

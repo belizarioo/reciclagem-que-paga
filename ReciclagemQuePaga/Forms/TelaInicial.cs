@@ -13,7 +13,7 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class TelaInicial : Form
     {
-        private readonly UsuarioService _service; 
+        private readonly UsuarioService _service;
 
         public TelaInicial(UsuarioService service)
         {
@@ -27,7 +27,7 @@ namespace ReciclagemQuePaga.Forms
             string usuarioLogado = "Guilherme";
             int saldo = 500;
 
-            lbl_saldo.Text = $"R$ {saldo}";
+            
             lbl_nU.Text = "Olá, " + usuarioLogado + "!";
         }
 
@@ -281,5 +281,7 @@ namespace ReciclagemQuePaga.Forms
         {
 
         }
+
+       
     }
 }
