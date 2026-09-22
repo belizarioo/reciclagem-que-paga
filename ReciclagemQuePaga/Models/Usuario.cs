@@ -10,7 +10,8 @@ public class Usuario
     public string email_usuario { get; set; } = String.Empty;
     public string senha_usuario { get; set; } = String.Empty;
     public string cpf_usuario { get; set; } = String.Empty;
-	
+    public decimal saldo_usuario { get; set; } 
+
     public Usuario()
     {
 
@@ -21,5 +22,6 @@ public class Usuario
         email_usuario = email;
         senha_usuario = senha;
         cpf_usuario = cpf;
+      
     }
 }

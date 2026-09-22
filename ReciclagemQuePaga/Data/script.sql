@@ -6,11 +6,12 @@ CREATE TABLE Usuarios
 	nome_usuario VARCHAR(64) NOT NULL,
 	email_usuario VARCHAR(70) UNIQUE NOT NULL,
 	senha_usuario VARCHAR(120) NOT NULL,
-	cpf_usuario CHAR(14) UNIQUE NOT NULL
+	cpf_usuario CHAR(14) UNIQUE NOT NULL,
+	saldo_usuario DECIMAL(7,2) DEFAULT 0.00
 );
 
 
-CREATE TABLE Materiais
+CREATE TABLE Material
 (
 	material_id INT PRIMARY KEY IDENTITY(1,1),
 	tipo_material VARCHAR(40) NOT NULL,
