@@ -41,7 +41,7 @@
             lbl_recompensa = new Label();
             lbl_material = new Label();
             lbl_peso = new Label();
-            button1 = new Button();
+            btn_confirmar = new Button();
             panel_confirmar = new Panel();
             label1 = new Label();
             panel_limpar = new Panel();
@@ -79,6 +79,7 @@
             cmb_material.Name = "cmb_material";
             cmb_material.Size = new Size(309, 36);
             cmb_material.TabIndex = 1;
+            cmb_material.SelectedIndexChanged += cmb_material_SelectedIndexChanged;
             // 
             // txb_peso
             // 
@@ -87,6 +88,7 @@
             txb_peso.Name = "txb_peso";
             txb_peso.Size = new Size(309, 34);
             txb_peso.TabIndex = 2;
+            txb_peso.TextChanged += txb_peso_TextChanged;
             // 
             // panel_preco
             // 
@@ -181,27 +183,28 @@
             lbl_peso.TabIndex = 5;
             lbl_peso.Text = "Peso:";
             // 
-            // button1
+            // btn_confirmar
             // 
-            button1.BackColor = Color.DarkGreen;
-            button1.FlatAppearance.BorderColor = Color.DarkGreen;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Trebuchet MS", 10F);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(137, 44);
-            button1.TabIndex = 6;
-            button1.Text = "  Confirmar";
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = false;
+            btn_confirmar.BackColor = Color.DarkGreen;
+            btn_confirmar.FlatAppearance.BorderColor = Color.DarkGreen;
+            btn_confirmar.FlatStyle = FlatStyle.Flat;
+            btn_confirmar.Font = new Font("Trebuchet MS", 10F);
+            btn_confirmar.ForeColor = Color.White;
+            btn_confirmar.Image = (Image)resources.GetObject("btn_confirmar.Image");
+            btn_confirmar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_confirmar.Location = new Point(0, 0);
+            btn_confirmar.Name = "btn_confirmar";
+            btn_confirmar.Size = new Size(137, 44);
+            btn_confirmar.TabIndex = 6;
+            btn_confirmar.Text = "  Confirmar";
+            btn_confirmar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_confirmar.UseVisualStyleBackColor = false;
+            btn_confirmar.Click += btn_confirmar_Click;
             // 
             // panel_confirmar
             // 
             panel_confirmar.Controls.Add(label1);
-            panel_confirmar.Controls.Add(button1);
+            panel_confirmar.Controls.Add(btn_confirmar);
             panel_confirmar.Location = new Point(23, 331);
             panel_confirmar.Name = "panel_confirmar";
             panel_confirmar.Size = new Size(137, 44);
@@ -343,7 +346,7 @@
         private Label lbl_peso;
         private Panel panel_confirmar;
         private Label label1;
-        private Button button1;
+        private Button btn_confirmar;
         private Label lbl_rs;
         private Panel panel_limpar;
         private Label label2;
