@@ -11,7 +11,7 @@ CREATE TABLE Usuarios
 );
 
 
-CREATE TABLE Material
+CREATE TABLE Materiais
 (
 	material_id INT PRIMARY KEY IDENTITY(1,1),
 	tipo_material VARCHAR(40) NOT NULL,

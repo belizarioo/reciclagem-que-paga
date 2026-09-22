@@ -22,13 +22,13 @@ namespace ReciclagemQuePaga.Services
 
         public void RegistrarTransacao(Transacao transacao)
         {
-            Material material = _materialRepository.BuscarPorId(transacao.MaterialId);
+            Material? material = _materialRepository.BuscarPorId(transacao.material_id);
 
             if (material != null)
             {
 
-                decimal valorTransacao = material.PrecoMaterialPorKilo * transacao.PesoTransacao;
-                transacao.ValorTransacao = valorTransacao;
+                decimal valorTransacao = material.preco_material_por_kilo * transacao.peso_transacao;
+                transacao.valor_transacao = valorTransacao;
 
                 
                 _repository.RegistrarTransacao(transacao);  

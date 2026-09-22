@@ -6,19 +6,25 @@ namespace ReciclagemQuePaga
 {
     public partial class LoginForm : Form
     {
-        private readonly UsuarioService _service;
+        private readonly UsuarioService _usuarioService;
+        private readonly MaterialService _materialService;
+        private readonly TransacaoService _transacaoService;
+        
 
-
-        public LoginForm(UsuarioService service)
-        {
-            _service = service;
-            InitializeComponent();
-        }
-
-        public LoginForm()
+        public LoginForm(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService)
         {
             InitializeComponent();
+            _usuarioService = usuarioService;
+            _materialService = materialService;
+            _transacaoService = transacaoService;
         }
+
+        public LoginForm(UsuarioService usuarioService)
+        {
+            InitializeComponent();
+            _usuarioService = usuarioService;
+        }
+
 
         public void LimparCampos()
         {
@@ -44,7 +50,7 @@ namespace ReciclagemQuePaga
             string email = txb_email.Text;
             string senha = txb_senha.Text;
 
-            Usuario? usuario = _service.BuscarPorEmail(email);
+            Usuario? usuario = _usuarioService.BuscarPorEmail(email);
 
             if (usuario != null)
             {
@@ -54,7 +60,7 @@ namespace ReciclagemQuePaga
 
                     if (form == null)
                     {
-                        form = new TelaInicial();
+                        form = new TelaInicial(_usuarioService, _materialService, _transacaoService, usuario);
                         form.Name = "telaInicial";
                         form.Show();
                         this.Hide();
@@ -95,11 +101,15 @@ namespace ReciclagemQuePaga
 
         private void link_cadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            string email = txb_email.Text;
+
+            Usuario? usuario = _usuarioService.BuscarPorEmail(email);
+
             CadastroForm form1 = (CadastroForm)Application.OpenForms["cadastroForm"];
 
             if (form1 == null)
             {
-                form1 = new CadastroForm(_service);
+                form1 = new CadastroForm(_usuarioService, _materialService, _transacaoService, usuario);
                 form1.Name = "cadastroForm";
                 form1.Show();
             }

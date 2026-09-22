@@ -13,26 +13,23 @@ namespace ReciclagemQuePaga.Forms
 {
     public partial class TelaInicial : Form
     {
-        private readonly UsuarioService _service;
+        private readonly UsuarioService _usuarioService;
+        private readonly MaterialService _materialService;
+        private readonly TransacaoService _transacaoService;
+        private readonly Usuario _usuarioLogado;
 
-        public TelaInicial(UsuarioService service)
+        public TelaInicial(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService, Usuario usuarioLogado)
         {
             InitializeComponent();
-            _service = service;
-        }
-        public TelaInicial()
-        {
-            InitializeComponent();
+            _usuarioService = usuarioService;
+            _materialService = materialService;
+            _transacaoService = transacaoService;
+            _usuarioLogado = usuarioLogado;
 
-            string usuarioLogado = "Guilherme";
-            int saldo = 500;
-
-            
-            lbl_nU.Text = "Olá, " + usuarioLogado + "!";
+            lbl_nU.Text = $"Olá, {_usuarioLogado.nome_usuario}!";
         }
 
-
-
+       
         bool menuAberto = true;
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -126,7 +123,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new Maquina();
+                form = new Maquina(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form.Name = "maquina";
                 form.Show();
             }
@@ -150,7 +147,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new Historico();
+                form = new Historico(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form.Name = "historico";
                 form.Show();
             }
@@ -174,7 +171,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new Saldo();
+                form = new Saldo(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form.Name = "saldo";
                 form.Show();
             }
@@ -195,7 +192,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form1 == null)
             {
-                form1 = new LoginForm(_service);
+                form1 = new LoginForm(_usuarioService, _materialService, _transacaoService);
                 form1.Name = "loginForm";
                 form1.Show();
             }
@@ -219,7 +216,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new Maquina();
+                form = new Maquina(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form.Name = "maquina";
                 form.Show();
             }
@@ -241,7 +238,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new Historico();
+                form = new Historico(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form.Name = "historico";
                 form.Show();
             }
@@ -263,7 +260,7 @@ namespace ReciclagemQuePaga.Forms
 
             if (form == null)
             {
-                form = new Saldo();
+                form = new Saldo(_usuarioService, _materialService, _transacaoService, _usuarioLogado);
                 form.Name = "saldo";
                 form.Show();
             }
