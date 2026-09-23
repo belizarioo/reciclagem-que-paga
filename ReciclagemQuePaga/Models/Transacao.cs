@@ -20,6 +20,7 @@ namespace ReciclagemQuePaga.Models
         public DateTime data_hora_transacao { get; set; } = DateTime.Now;
         public decimal valor_transacao { get; set; } 
         public decimal peso_transacao { get; set; }
+        public string tipo_material => Material?.tipo_material;
 
         public Transacao()
         {

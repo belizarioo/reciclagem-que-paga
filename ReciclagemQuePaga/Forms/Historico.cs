@@ -47,12 +47,22 @@ namespace ReciclagemQuePaga.Forms
             this.Hide();
         }
 
-        private void Historico_Load(object sender, EventArgs e)
+        private void Historico_Activated(object sender, EventArgs e)
+        {
+            CarregarHistorico();
+        }
+
+        private void CarregarHistorico()
         {
             dgw_historico.AutoGenerateColumns = false;
 
+            dgw_historico.Columns[0].DataPropertyName = "data_hora_transacao";
+            dgw_historico.Columns[1].DataPropertyName = "tipo_material";
+            dgw_historico.Columns[2].DataPropertyName = "peso_transacao";
+            dgw_historico.Columns[3].DataPropertyName = "valor_transacao";
+
             int usuarioId = _usuarioLogado.usuario_id;
-            dgw_historico.DataSource =  _transacaoService.ListarTransacoes(usuarioId);
+            dgw_historico.DataSource = _transacaoService.ListarTransacoes(usuarioId);
         }
     }
 }
