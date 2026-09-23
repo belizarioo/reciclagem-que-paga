@@ -25,9 +25,10 @@ namespace ReciclagemQuePaga.Data
 
         public List<Transacao> ListarTransacoes(int usuarioId)
         {
-            return _context.Transacoes.Include(t => t.Material).
-                                       Where(t => t.usuario_id == usuarioId).
-                                       ToList();
+            return _context.Transacoes
+                .Include(t => t.Material)
+                .Where(t => t.usuario_id == usuarioId)
+                .ToList();
         }
     }
 }
