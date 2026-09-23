@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 using System;
 using ReciclagemQuePaga.Models;
 
-public class DataBaseConnection:DbContext
+public class DataBaseConnection : DbContext
 {
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Material> Materiais { get; set; }
     public DbSet<Transacao> Transacoes { get; set; }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         string conexao = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=reciclagemQuePaga;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         optionsBuilder.UseSqlServer(conexao);
     }
 }
+
+// atualização
