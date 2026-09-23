@@ -26,7 +26,7 @@ namespace ReciclagemQuePaga.Forms
             _transacaoService = transacaoService;
             _usuarioLogado = usuarioLogado;
         }
-
+        
         private void btn_tI_Click(object sender, EventArgs e)
         {
             TelaInicial form1 = (TelaInicial)Application.OpenForms["telaInicial"];
@@ -66,41 +66,5 @@ namespace ReciclagemQuePaga.Forms
 
             this.Hide();
         }
-
-        private void Saldo_Load(object sender, EventArgs e)
-        {
-            lbl_saldo.Text = $"R$ {_usuarioLogado.saldo_usuario:N2}";
-        }
-
-        private void btn_Resgatar_Click(object sender, EventArgs e)
-        {
-            if (_usuarioLogado.saldo_usuario <= 0)
-            {
-                MessageBox.Show("Saldo insuficiente para saque");
-                return;
-            }
-
-            decimal valorResgatado = _usuarioLogado.saldo_usuario;
-
-            _usuarioLogado.saldo_usuario = 0;
-            _usuarioService.AtualizarUsuario(_usuarioLogado);
-
-            lbl_saldo.Text = "R$ 0,00";
-
-            MessageBox.Show($"R$ {valorResgatado:N2} resgatado com sucesso!");
-        }
-
-        private void Saldo_Activated(object sender, EventArgs e)
-        {
-            var usuarioAtualizado = _usuarioService.BuscarPorEmail(_usuarioLogado.email_usuario);
-
-            if (usuarioAtualizado != null)
-            {
-                _usuarioLogado.saldo_usuario = usuarioAtualizado.saldo_usuario;
-            }
-
-            lbl_saldo.Text = $"R$ {_usuarioLogado.saldo_usuario:N2}";
-        }
-    
     }
 }

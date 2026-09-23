@@ -26,11 +26,6 @@ namespace ReciclagemQuePaga.Services
             return _repository.BuscarPorEmail(email);
         }
 
-        public void AtualizarUsuario(Usuario usuario)
-        {
-            _repository.AtualizarUsuario(usuario);
-        }
-
     }
 
 }

@@ -56,9 +56,9 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Trebuchet MS", 25F);
-            label1.Location = new Point(14, 32);
+            label1.Location = new Point(12, 24);
             label1.Name = "label1";
-            label1.Size = new Size(211, 52);
+            label1.Size = new Size(172, 43);
             label1.TabIndex = 0;
             label1.Text = "Meu Saldo";
             // 
@@ -67,18 +67,17 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Trebuchet MS", 12F);
-            label2.Location = new Point(14, 89);
+            label2.Location = new Point(12, 67);
             label2.Name = "label2";
-            label2.Size = new Size(404, 26);
+            label2.Size = new Size(318, 22);
             label2.TabIndex = 1;
             label2.Text = "Acompanhe seus ganhos e saldo disponível.";
             // 
             // btn_tI
             // 
-            btn_tI.Location = new Point(805, 16);
-            btn_tI.Margin = new Padding(3, 4, 3, 4);
+            btn_tI.Location = new Point(704, 12);
             btn_tI.Name = "btn_tI";
-            btn_tI.Size = new Size(86, 31);
+            btn_tI.Size = new Size(75, 23);
             btn_tI.TabIndex = 9;
             btn_tI.Text = "Voltar..";
             btn_tI.UseVisualStyleBackColor = true;
@@ -90,10 +89,9 @@
             panel1.Controls.Add(lbl_saldo);
             panel1.Controls.Add(lbl_S);
             panel1.Controls.Add(pic_carteira);
-            panel1.Location = new Point(34, 185);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(30, 139);
             panel1.Name = "panel1";
-            panel1.Size = new Size(856, 153);
+            panel1.Size = new Size(749, 115);
             panel1.TabIndex = 10;
             // 
             // lbl_saldo
@@ -101,9 +99,9 @@
             lbl_saldo.AutoSize = true;
             lbl_saldo.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_saldo.ForeColor = Color.White;
-            lbl_saldo.Location = new Point(26, 73);
+            lbl_saldo.Location = new Point(23, 55);
             lbl_saldo.Name = "lbl_saldo";
-            lbl_saldo.Size = new Size(0, 49);
+            lbl_saldo.Size = new Size(0, 40);
             lbl_saldo.TabIndex = 2;
             // 
             // lbl_S
@@ -113,7 +111,7 @@
             lbl_S.ForeColor = Color.White;
             lbl_S.Location = new Point(3, 1);
             lbl_S.Name = "lbl_S";
-            lbl_S.Size = new Size(203, 32);
+            lbl_S.Size = new Size(166, 26);
             lbl_S.TabIndex = 1;
             lbl_S.Text = "Saldo disponível:";
             // 
@@ -121,10 +119,9 @@
             // 
             pic_carteira.BackColor = Color.Transparent;
             pic_carteira.Image = (Image)resources.GetObject("pic_carteira.Image");
-            pic_carteira.Location = new Point(650, 4);
-            pic_carteira.Margin = new Padding(3, 4, 3, 4);
+            pic_carteira.Location = new Point(569, 3);
             pic_carteira.Name = "pic_carteira";
-            pic_carteira.Size = new Size(136, 145);
+            pic_carteira.Size = new Size(119, 109);
             pic_carteira.SizeMode = PictureBoxSizeMode.Zoom;
             pic_carteira.TabIndex = 0;
             pic_carteira.TabStop = false;
@@ -133,18 +130,17 @@
             // 
             panel4.Controls.Add(label3);
             panel4.Controls.Add(btn_Resgatar);
-            panel4.Location = new Point(101, 504);
-            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Location = new Point(88, 378);
             panel4.Name = "panel4";
-            panel4.Size = new Size(266, 55);
+            panel4.Size = new Size(233, 41);
             panel4.TabIndex = 11;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(-400, -28);
+            label3.Location = new Point(-350, -21);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(38, 15);
             label3.TabIndex = 5;
             label3.Text = "label3";
             // 
@@ -157,31 +153,28 @@
             btn_Resgatar.Image = (Image)resources.GetObject("btn_Resgatar.Image");
             btn_Resgatar.ImageAlign = ContentAlignment.MiddleLeft;
             btn_Resgatar.Location = new Point(0, 0);
-            btn_Resgatar.Margin = new Padding(3, 4, 3, 4);
             btn_Resgatar.Name = "btn_Resgatar";
-            btn_Resgatar.Size = new Size(266, 53);
+            btn_Resgatar.Size = new Size(233, 40);
             btn_Resgatar.TabIndex = 6;
             btn_Resgatar.Text = "              Resgatar Saldo";
             btn_Resgatar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Resgatar.UseVisualStyleBackColor = false;
-            btn_Resgatar.Click += btn_Resgatar_Click;
             // 
             // panel2
             // 
             panel2.Controls.Add(label4);
             panel2.Controls.Add(btn_ver);
-            panel2.Location = new Point(554, 504);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(485, 378);
             panel2.Name = "panel2";
-            panel2.Size = new Size(266, 55);
+            panel2.Size = new Size(233, 41);
             panel2.TabIndex = 12;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(-400, -28);
+            label4.Location = new Point(-350, -21);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(38, 15);
             label4.TabIndex = 5;
             label4.Text = "label4";
             // 
@@ -194,9 +187,8 @@
             btn_ver.Image = (Image)resources.GetObject("btn_ver.Image");
             btn_ver.ImageAlign = ContentAlignment.MiddleLeft;
             btn_ver.Location = new Point(0, 0);
-            btn_ver.Margin = new Padding(3, 4, 3, 4);
             btn_ver.Name = "btn_ver";
-            btn_ver.Size = new Size(266, 55);
+            btn_ver.Size = new Size(233, 41);
             btn_ver.TabIndex = 6;
             btn_ver.Text = "               Ver Extrato";
             btn_ver.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -207,10 +199,10 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(503, 581);
-            label5.Margin = new Padding(5, 0, 5, 0);
+            label5.Location = new Point(440, 436);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(451, 20);
+            label5.Size = new Size(357, 15);
             label5.TabIndex = 16;
             label5.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
@@ -218,20 +210,19 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(217, 16);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(190, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(96, 67);
+            pictureBox1.Size = new Size(84, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
             // 
             // Saldo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(195, 212, 200);
-            ClientSize = new Size(914, 605);
+            ClientSize = new Size(800, 454);
             Controls.Add(pictureBox1);
             Controls.Add(label5);
             Controls.Add(panel2);
@@ -241,11 +232,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Saldo";
             Text = "Saldo";
-            Activated += Saldo_Activated;
-            Load += Saldo_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pic_carteira).EndInit();

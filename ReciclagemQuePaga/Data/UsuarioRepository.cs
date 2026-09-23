@@ -28,11 +28,5 @@ namespace ReciclagemQuePaga.Data
         {
             return _context.Usuarios.FirstOrDefault(u => u.email_usuario == email);
         }
-
-        public void AtualizarUsuario(Usuario usuario)
-        {
-            _context.Usuarios.Update(usuario);
-            _context.SaveChanges();
-        }
     }
 }
