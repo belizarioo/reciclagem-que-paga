@@ -30,3 +30,13 @@ CREATE TABLE Transacoes
 	CONSTRAINT Fk_Transacoes_Usuarios FOREIGN KEY(usuario_id) REFERENCES Usuarios(usuario_id),
 	CONSTRAINT Fk_Transacoes_Materiais FOREIGN KEY(material_id) REFERENCES Materiais(material_id)
 );
+
+INSERT INTO Materiais(tipo_material, preco_material_por_kilo)
+VALUES
+	('Papelão', 0.80),
+	('Papel', 0.60),
+	('Plástico', 1.50),
+	('Alumínio', 4.50),
+	('Cobre', 25.00),
+	('Ferro', 0.90),
+	('Vidro', 0.30);

@@ -18,6 +18,8 @@ namespace ReciclagemQuePaga.Forms
         private readonly TransacaoService _transacaoService;
         private readonly Usuario _usuarioLogado;
 
+        bool logoutEmAndamento = false;
+
         public TelaInicial(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService, Usuario usuarioLogado)
         {
             InitializeComponent();
@@ -71,7 +73,10 @@ namespace ReciclagemQuePaga.Forms
 
         private void TelaInicial_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (!logoutEmAndamento)
+            {
+                Application.Exit();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -188,22 +193,22 @@ namespace ReciclagemQuePaga.Forms
         private void btn_sair_Click(object sender, EventArgs e)
         {
 
-            LoginForm form1 = (LoginForm)Application.OpenForms["loginForm"];
+            logoutEmAndamento = true;
 
-            if (form1 == null)
+            LoginForm loginForm = (LoginForm)Application.OpenForms["loginForm"];
+
+            if (loginForm == null)
             {
-                form1 = new LoginForm(_usuarioService, _materialService, _transacaoService);
-                form1.Name = "loginForm";
-                form1.Show();
-            }
-            else
-            {
-                form1.Show();
-                form1.BringToFront();
-                form1.Activate();
+                loginForm = new LoginForm(_usuarioService, _materialService, _transacaoService);
+                loginForm.Name = "loginForm";
             }
 
-            this.Hide();
+            loginForm.LimparCampos();
+            loginForm.Show();
+            loginForm.BringToFront();
+            loginForm.Activate();
+
+            this.Close();
 
         }
 
