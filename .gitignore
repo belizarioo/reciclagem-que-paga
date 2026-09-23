@@ -6,3 +6,4 @@
 /.vs/ProjectEvaluation
 /ReciclagemQuePaga/Data/.gitkeep
 /.vs
+/ReciclagemQuePaga/Data/DataBaseConnection.cs
