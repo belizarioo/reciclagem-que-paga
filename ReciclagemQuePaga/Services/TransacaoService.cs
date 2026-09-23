@@ -39,5 +39,10 @@ namespace ReciclagemQuePaga.Services
             }
 
         }
+
+        public List<Transacao> ListarTransacoes(int usuarioId)
+        {
+            return _repository.ListarTransacoes(usuarioId);
+        }
     }
 }

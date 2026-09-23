@@ -47,6 +47,10 @@ namespace ReciclagemQuePaga.Forms
             this.Hide();
         }
 
-        
+        private void Historico_Load(object sender, EventArgs e)
+        {
+            int usuarioId = _usuarioLogado.usuario_id;
+            dgw_historico.DataSource =  _transacaoService.ListarTransacoes(usuarioId);
+        }
     }
 }

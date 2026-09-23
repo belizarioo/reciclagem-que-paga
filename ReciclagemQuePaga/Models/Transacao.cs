@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,9 @@ namespace ReciclagemQuePaga.Models
         public int transacao_id { get; set; }
         public int usuario_id { get; set; }
         public int material_id { get; set; }
+
+        [ForeignKey("material_id")]
+        public virtual Material Material { get; set; }
         public DateTime data_hora_transacao { get; set; } = DateTime.Now;
         public decimal valor_transacao { get; set; } 
         public decimal peso_transacao { get; set; }
