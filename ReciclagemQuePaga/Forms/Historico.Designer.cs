@@ -33,15 +33,15 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historico));
             dgw_historico = new DataGridView();
-            dh = new DataGridViewTextBoxColumn();
-            material = new DataGridViewTextBoxColumn();
-            peso = new DataGridViewTextBoxColumn();
-            valor = new DataGridViewTextBoxColumn();
             btn_tI = new Button();
             label1 = new Label();
             label2 = new Label();
             label6 = new Label();
             pictureBox1 = new PictureBox();
+            dh = new DataGridViewTextBoxColumn();
+            material = new DataGridViewTextBoxColumn();
+            peso = new DataGridViewTextBoxColumn();
+            valor = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgw_historico).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -73,45 +73,21 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgw_historico.DefaultCellStyle = dataGridViewCellStyle3;
             dgw_historico.EnableHeadersVisualStyles = false;
-            dgw_historico.Location = new Point(12, 119);
+            dgw_historico.Location = new Point(14, 159);
+            dgw_historico.Margin = new Padding(3, 4, 3, 4);
             dgw_historico.Name = "dgw_historico";
             dgw_historico.RowHeadersVisible = false;
-            dgw_historico.Size = new Size(776, 299);
+            dgw_historico.RowHeadersWidth = 51;
+            dgw_historico.Size = new Size(887, 399);
             dgw_historico.TabIndex = 0;
-            // 
-            // dh
-            // 
-            dh.FillWeight = 140F;
-            dh.HeaderText = "Data e hora";
-            dh.Name = "dh";
-            dh.ReadOnly = true;
-            // 
-            // material
-            // 
-            material.HeaderText = "Material";
-            material.Name = "material";
-            material.ReadOnly = true;
-            // 
-            // peso
-            // 
-            peso.FillWeight = 80F;
-            peso.HeaderText = "Peso";
-            peso.Name = "peso";
-            peso.ReadOnly = true;
-            // 
-            // valor
-            // 
-            valor.FillWeight = 80F;
-            valor.HeaderText = "Valor";
-            valor.Name = "valor";
-            valor.ReadOnly = true;
             // 
             // btn_tI
             // 
             btn_tI.Font = new Font("Trebuchet MS", 9F);
-            btn_tI.Location = new Point(713, 12);
+            btn_tI.Location = new Point(815, 16);
+            btn_tI.Margin = new Padding(3, 4, 3, 4);
             btn_tI.Name = "btn_tI";
-            btn_tI.Size = new Size(75, 23);
+            btn_tI.Size = new Size(86, 31);
             btn_tI.TabIndex = 9;
             btn_tI.Text = "Voltar";
             btn_tI.UseVisualStyleBackColor = true;
@@ -121,9 +97,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 25F);
-            label1.Location = new Point(12, 24);
+            label1.Location = new Point(14, 32);
             label1.Name = "label1";
-            label1.Size = new Size(343, 43);
+            label1.Size = new Size(424, 52);
             label1.TabIndex = 10;
             label1.Text = "Histórico de Entregas";
             // 
@@ -131,9 +107,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 10F);
-            label2.Location = new Point(21, 67);
+            label2.Location = new Point(24, 89);
             label2.Name = "label2";
-            label2.Size = new Size(259, 18);
+            label2.Size = new Size(320, 23);
             label2.TabIndex = 11;
             label2.Text = "Confira suas entregas realizadas abaixo:";
             // 
@@ -141,29 +117,65 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Location = new Point(431, 430);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(493, 573);
+            label6.Margin = new Padding(5, 0, 5, 0);
             label6.Name = "label6";
-            label6.Size = new Size(357, 15);
+            label6.Size = new Size(451, 20);
             label6.TabIndex = 17;
             label6.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(337, 2);
+            pictureBox1.Location = new Point(385, 3);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(34, 33);
+            pictureBox1.Size = new Size(39, 44);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
+            // dh
+            // 
+            dh.DataPropertyName = "data_hora_transacao";
+            dh.FillWeight = 140F;
+            dh.HeaderText = "Data e hora";
+            dh.MinimumWidth = 6;
+            dh.Name = "dh";
+            dh.ReadOnly = true;
+            // 
+            // material
+            // 
+            material.DataPropertyName = "tipo_material";
+            material.HeaderText = "Material";
+            material.MinimumWidth = 6;
+            material.Name = "material";
+            material.ReadOnly = true;
+            // 
+            // peso
+            // 
+            peso.DataPropertyName = "peso_transacao";
+            peso.FillWeight = 80F;
+            peso.HeaderText = "Peso";
+            peso.MinimumWidth = 6;
+            peso.Name = "peso";
+            peso.ReadOnly = true;
+            // 
+            // valor
+            // 
+            valor.DataPropertyName = "valor_transacao";
+            valor.FillWeight = 80F;
+            valor.HeaderText = "Valor";
+            valor.MinimumWidth = 6;
+            valor.Name = "valor";
+            valor.ReadOnly = true;
+            // 
             // Historico
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(195, 212, 200);
-            ClientSize = new Size(797, 450);
+            ClientSize = new Size(911, 600);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(label2);
@@ -171,8 +183,10 @@
             Controls.Add(btn_tI);
             Controls.Add(dgw_historico);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Historico";
             Text = "Histórico";
+            Load += Historico_Load;
             ((System.ComponentModel.ISupportInitialize)dgw_historico).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -186,10 +200,10 @@
         private Label label1;
         private Label label2;
         private Label label6;
+        private PictureBox pictureBox1;
         private DataGridViewTextBoxColumn dh;
         private DataGridViewTextBoxColumn material;
         private DataGridViewTextBoxColumn peso;
         private DataGridViewTextBoxColumn valor;
-        private PictureBox pictureBox1;
     }
 }

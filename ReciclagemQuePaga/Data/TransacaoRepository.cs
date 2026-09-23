@@ -1,4 +1,5 @@
-﻿using ReciclagemQuePaga.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ReciclagemQuePaga.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,13 @@ namespace ReciclagemQuePaga.Data
         {
             _context.Transacoes.Add(transacao);
             _context.SaveChanges();
+        }
+
+        public List<Transacao> ListarTransacoes(int usuarioId)
+        {
+            return _context.Transacoes.Include(t => t.Material).
+                                       Where(t => t.usuario_id == usuarioId).
+                                       ToList();
         }
     }
 }
