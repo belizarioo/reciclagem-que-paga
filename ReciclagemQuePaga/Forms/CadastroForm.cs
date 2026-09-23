@@ -67,7 +67,9 @@ namespace ReciclagemQuePaga.Forms
 
             try
             {
-                _usuarioService.CadastroUsuario(new Usuario(nome, email, senha, cpf));
+                string senhaHash = BCrypt.Net.BCrypt.HashPassword(senha);
+
+                _usuarioService.CadastroUsuario(new Usuario(nome, email, senhaHash, cpf));
                 MessageBox.Show("Usuario Cadastrado com sucesso");
 
                 LoginForm loginForm = new LoginForm(_usuarioService, _materialService, _transacaoService);

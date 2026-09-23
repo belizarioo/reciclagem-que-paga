@@ -9,11 +9,14 @@ namespace ReciclagemQuePaga
         private readonly UsuarioService _usuarioService;
         private readonly MaterialService _materialService;
         private readonly TransacaoService _transacaoService;
+
         
 
         public LoginForm(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService)
         {
             InitializeComponent();
+            this.Name = "loginForm";
+
             _usuarioService = usuarioService;
             _materialService = materialService;
             _transacaoService = transacaoService;
@@ -54,23 +57,13 @@ namespace ReciclagemQuePaga
 
             if (usuario != null)
             {
-                if (senha == usuario.senha_usuario)
+                if (BCrypt.Net.BCrypt.Verify(senha, usuario.senha_usuario))
                 {
-                    TelaInicial form = (TelaInicial)Application.OpenForms["telaInicial"];
 
-                    if (form == null)
-                    {
-                        form = new TelaInicial(_usuarioService, _materialService, _transacaoService, usuario);
-                        form.Name = "telaInicial";
-                        form.Show();
-                        this.Hide();
-
-                    }
-                    else
-                    {
-                        form.Activate();
-                        //form.Show();
-                    }
+                    TelaInicial form = new TelaInicial(_usuarioService, _materialService, _transacaoService, usuario);
+                    form.Name = "telaInicial";
+                    form.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -121,6 +114,11 @@ namespace ReciclagemQuePaga
             }
 
             this.Hide();
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
         }
     }
 
