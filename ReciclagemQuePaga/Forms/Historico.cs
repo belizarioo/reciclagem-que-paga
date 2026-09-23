@@ -49,6 +49,8 @@ namespace ReciclagemQuePaga.Forms
 
         private void Historico_Load(object sender, EventArgs e)
         {
+            dgw_historico.AutoGenerateColumns = false;
+
             int usuarioId = _usuarioLogado.usuario_id;
             dgw_historico.DataSource =  _transacaoService.ListarTransacoes(usuarioId);
         }
