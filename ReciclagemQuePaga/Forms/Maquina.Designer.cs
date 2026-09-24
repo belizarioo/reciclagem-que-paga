@@ -60,7 +60,7 @@
             // 
             // pic_img
             // 
-            pic_img.BackColor = Color.DarkSeaGreen;
+            pic_img.BackColor = Color.Transparent;
             pic_img.Image = (Image)resources.GetObject("pic_img.Image");
             pic_img.Location = new Point(505, 125);
             pic_img.Name = "pic_img";
@@ -164,6 +164,7 @@
             // lbl_material
             // 
             lbl_material.AutoSize = true;
+            lbl_material.BackColor = Color.Transparent;
             lbl_material.Font = new Font("Trebuchet MS", 11F, FontStyle.Bold);
             lbl_material.ForeColor = Color.White;
             lbl_material.Location = new Point(23, 125);
@@ -175,6 +176,7 @@
             // lbl_peso
             // 
             lbl_peso.AutoSize = true;
+            lbl_peso.BackColor = Color.Transparent;
             lbl_peso.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold);
             lbl_peso.ForeColor = Color.White;
             lbl_peso.Location = new Point(23, 187);
@@ -185,8 +187,9 @@
             // 
             // btn_confirmar
             // 
-            btn_confirmar.BackColor = Color.DarkGreen;
+            btn_confirmar.BackColor = Color.Green;
             btn_confirmar.FlatAppearance.BorderColor = Color.DarkGreen;
+            btn_confirmar.FlatAppearance.BorderSize = 0;
             btn_confirmar.FlatStyle = FlatStyle.Flat;
             btn_confirmar.Font = new Font("Trebuchet MS", 10F);
             btn_confirmar.ForeColor = Color.White;
@@ -269,18 +272,22 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 16F);
-            label3.Location = new Point(23, 37);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Trebuchet MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(23, 36);
             label3.Name = "label3";
-            label3.Size = new Size(232, 27);
+            label3.Size = new Size(293, 35);
             label3.TabIndex = 9;
             label3.Text = "Máquina de Simulação";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Trebuchet MS", 11F);
-            label4.Location = new Point(23, 78);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(23, 81);
             label4.Name = "label4";
             label4.Size = new Size(414, 20);
             label4.TabIndex = 10;
@@ -290,6 +297,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
+            label6.ForeColor = Color.White;
             label6.Location = new Point(442, 430);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
@@ -299,9 +307,11 @@
             // 
             // Maquina
             // 
+            AcceptButton = btn_confirmar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
+            CancelButton = btn_tI;
             ClientSize = new Size(800, 445);
             Controls.Add(label6);
             Controls.Add(label4);
@@ -320,6 +330,7 @@
             Name = "Maquina";
             Text = "Máquina";
             Load += Máquina_Load;
+            Paint += Maquina_Paint;
             ((System.ComponentModel.ISupportInitialize)pic_img).EndInit();
             panel_preco.ResumeLayout(false);
             panel_preco.PerformLayout();

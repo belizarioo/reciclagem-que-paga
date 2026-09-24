@@ -48,7 +48,9 @@
             // 
             // lbl_cc
             // 
+            lbl_cc.BackColor = Color.Transparent;
             lbl_cc.Font = new Font("Trebuchet MS", 22F, FontStyle.Bold);
+            lbl_cc.ForeColor = Color.FromArgb(27, 77, 46);
             lbl_cc.Location = new Point(502, 9);
             lbl_cc.Name = "lbl_cc";
             lbl_cc.Size = new Size(180, 39);
@@ -63,7 +65,7 @@
             txb_email.Name = "txb_email";
             txb_email.PlaceholderText = "Insira seu e-mail";
             txb_email.Size = new Size(338, 34);
-            txb_email.TabIndex = 1;
+            txb_email.TabIndex = 3;
             txb_email.TextChanged += txb_email_TextChanged;
             // 
             // txb_senha
@@ -74,12 +76,14 @@
             txb_senha.Name = "txb_senha";
             txb_senha.PlaceholderText = "Insira sua senha";
             txb_senha.Size = new Size(338, 34);
-            txb_senha.TabIndex = 2;
+            txb_senha.TabIndex = 4;
             // 
             // lbl_email
             // 
             lbl_email.AutoSize = true;
+            lbl_email.BackColor = Color.Transparent;
             lbl_email.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_email.ForeColor = Color.White;
             lbl_email.Location = new Point(421, 179);
             lbl_email.Name = "lbl_email";
             lbl_email.Size = new Size(64, 24);
@@ -89,7 +93,9 @@
             // lbl_senha
             // 
             lbl_senha.AutoSize = true;
+            lbl_senha.BackColor = Color.Transparent;
             lbl_senha.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_senha.ForeColor = Color.White;
             lbl_senha.Location = new Point(421, 242);
             lbl_senha.Name = "lbl_senha";
             lbl_senha.Size = new Size(67, 24);
@@ -109,7 +115,7 @@
             // 
             // btn_cadastrar
             // 
-            btn_cadastrar.BackColor = Color.Green;
+            btn_cadastrar.BackColor = Color.FromArgb(27, 77, 46);
             btn_cadastrar.FlatAppearance.BorderColor = Color.Honeydew;
             btn_cadastrar.FlatAppearance.BorderSize = 0;
             btn_cadastrar.FlatStyle = FlatStyle.Flat;
@@ -131,12 +137,14 @@
             txb_confirmar_senha.Name = "txb_confirmar_senha";
             txb_confirmar_senha.PlaceholderText = "Confirme sua senha";
             txb_confirmar_senha.Size = new Size(338, 34);
-            txb_confirmar_senha.TabIndex = 7;
+            txb_confirmar_senha.TabIndex = 5;
             // 
             // lbl_csenha
             // 
             lbl_csenha.AutoSize = true;
+            lbl_csenha.BackColor = Color.Transparent;
             lbl_csenha.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_csenha.ForeColor = Color.White;
             lbl_csenha.Location = new Point(421, 315);
             lbl_csenha.Name = "lbl_csenha";
             lbl_csenha.Size = new Size(156, 24);
@@ -146,7 +154,9 @@
             // lbl_nome
             // 
             lbl_nome.AutoSize = true;
+            lbl_nome.BackColor = Color.Transparent;
             lbl_nome.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_nome.ForeColor = Color.White;
             lbl_nome.Location = new Point(421, 56);
             lbl_nome.Name = "lbl_nome";
             lbl_nome.Size = new Size(65, 24);
@@ -162,12 +172,14 @@
             txb_nome.Name = "txb_nome";
             txb_nome.PlaceholderText = "Insira seu nome completo";
             txb_nome.Size = new Size(338, 34);
-            txb_nome.TabIndex = 10;
+            txb_nome.TabIndex = 1;
             // 
             // lbl_cpf
             // 
             lbl_cpf.AutoSize = true;
+            lbl_cpf.BackColor = Color.Transparent;
             lbl_cpf.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_cpf.ForeColor = Color.White;
             lbl_cpf.Location = new Point(420, 120);
             lbl_cpf.Name = "lbl_cpf";
             lbl_cpf.Size = new Size(49, 24);
@@ -181,22 +193,27 @@
             msk_txb_cpf.Mask = "000,000,000,00";
             msk_txb_cpf.Name = "msk_txb_cpf";
             msk_txb_cpf.Size = new Size(338, 31);
-            msk_txb_cpf.TabIndex = 12;
+            msk_txb_cpf.TabIndex = 2;
             // 
             // voltar_telalogin
             // 
+            voltar_telalogin.ActiveLinkColor = Color.FromArgb(27, 77, 46);
             voltar_telalogin.AutoSize = true;
+            voltar_telalogin.BackColor = Color.Transparent;
             voltar_telalogin.Font = new Font("Segoe UI", 8F);
+            voltar_telalogin.ForeColor = SystemColors.ControlText;
+            voltar_telalogin.LinkColor = Color.White;
             voltar_telalogin.Location = new Point(628, 428);
             voltar_telalogin.Name = "voltar_telalogin";
             voltar_telalogin.Size = new Size(131, 13);
-            voltar_telalogin.TabIndex = 13;
+            voltar_telalogin.TabIndex = 7;
             voltar_telalogin.TabStop = true;
             voltar_telalogin.Text = "Voltar para tela de login";
             voltar_telalogin.LinkClicked += voltar_telalogin_LinkClicked;
             // 
             // CadastroForm
             // 
+            AcceptButton = btn_cadastrar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
@@ -218,6 +235,8 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroForm";
             Text = "Tela de Cadastro";
+            FormClosed += CadastroForm_FormClosed;
+            Paint += CadastroForm_Paint;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

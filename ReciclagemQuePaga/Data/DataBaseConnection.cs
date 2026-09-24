@@ -17,7 +17,7 @@ public class DataBaseConnection : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        string conexao = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=reciclagemQuePaga;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+        string conexao = "Data Source=VPR0687145W11-1\\SQLEXPRESS;Initial Catalog=reciclagemQuePaga;Persist Security Info=True;User ID=sa;Password=123456;Trust Server Certificate=True";
         optionsBuilder.UseSqlServer(conexao);
     }
 }

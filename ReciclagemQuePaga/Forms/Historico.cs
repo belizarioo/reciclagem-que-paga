@@ -64,5 +64,21 @@ namespace ReciclagemQuePaga.Forms
             int usuarioId = _usuarioLogado.usuario_id;
             dgw_historico.DataSource = _transacaoService.ListarTransacoes(usuarioId);
         }
+
+        private void Historico_Paint(object sender, PaintEventArgs e)
+        {
+            Color corInicio = Color.FromArgb(120, 185, 130);  // Verde claro (topo)
+            Color corFim = Color.FromArgb(45, 95, 60);       // Verde escuro (base)
+
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
+                new System.Drawing.Drawing2D.LinearGradientBrush(
+                    this.ClientRectangle,
+                    corInicio,
+                    corFim,
+                    System.Drawing.Drawing2D.LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
     }
 }

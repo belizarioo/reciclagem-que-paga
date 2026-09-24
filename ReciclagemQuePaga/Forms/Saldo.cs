@@ -101,6 +101,24 @@ namespace ReciclagemQuePaga.Forms
 
             lbl_saldo.Text = $"R$ {_usuarioLogado.saldo_usuario:N2}";
         }
-    
+
+        private void Saldo_Paint(object sender, PaintEventArgs e)
+        {
+            Color corInicio = Color.FromArgb(120, 185, 130);  // Verde mais claro (topo)
+            Color corFim = Color.FromArgb(20, 55, 30);       // Verde escuro (base)
+
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
+                new System.Drawing.Drawing2D.LinearGradientBrush(
+                    this.ClientRectangle,
+                    corInicio,
+                    corFim,
+                    System.Drawing.Drawing2D.LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        
+        }
     }
-}
+

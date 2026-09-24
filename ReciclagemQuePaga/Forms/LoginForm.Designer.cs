@@ -49,49 +49,49 @@
             txb_email.CausesValidation = false;
             txb_email.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txb_email.ForeColor = Color.Black;
-            txb_email.Location = new Point(14, 207);
-            txb_email.Margin = new Padding(5, 4, 5, 4);
+            txb_email.Location = new Point(12, 155);
+            txb_email.Margin = new Padding(4, 3, 4, 3);
             txb_email.Multiline = true;
             txb_email.Name = "txb_email";
             txb_email.PlaceholderText = "Insira seu E-mail";
-            txb_email.Size = new Size(347, 40);
+            txb_email.Size = new Size(304, 31);
             txb_email.TabIndex = 4;
             // 
             // txb_senha
             // 
             txb_senha.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txb_senha.Location = new Point(14, 287);
-            txb_senha.Margin = new Padding(5, 4, 5, 4);
+            txb_senha.Location = new Point(12, 215);
+            txb_senha.Margin = new Padding(4, 3, 4, 3);
             txb_senha.Multiline = true;
             txb_senha.Name = "txb_senha";
             txb_senha.PlaceholderText = "Insira sua senha";
-            txb_senha.Size = new Size(347, 40);
+            txb_senha.Size = new Size(304, 31);
             txb_senha.TabIndex = 5;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(120, 120, 120);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(463, 0);
-            pictureBox1.Margin = new Padding(5, 4, 5, 4);
+            pictureBox1.Location = new Point(405, 0);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(450, 601);
+            pictureBox1.Size = new Size(395, 459);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // btn_entrar
             // 
-            btn_entrar.BackColor = Color.Green;
+            btn_entrar.BackColor = Color.FromArgb(27, 77, 46);
             btn_entrar.FlatAppearance.BorderSize = 0;
             btn_entrar.FlatStyle = FlatStyle.Flat;
             btn_entrar.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_entrar.ForeColor = SystemColors.ButtonHighlight;
-            btn_entrar.Location = new Point(213, 347);
-            btn_entrar.Margin = new Padding(5, 4, 5, 4);
+            btn_entrar.Location = new Point(186, 260);
+            btn_entrar.Margin = new Padding(4, 3, 4, 3);
             btn_entrar.Name = "btn_entrar";
-            btn_entrar.Size = new Size(149, 41);
-            btn_entrar.TabIndex = 0;
+            btn_entrar.Size = new Size(130, 31);
+            btn_entrar.TabIndex = 8;
             btn_entrar.Text = "Entrar";
             btn_entrar.UseVisualStyleBackColor = false;
             btn_entrar.Click += btn_entrar_Click;
@@ -99,30 +99,31 @@
             // cb_senha
             // 
             cb_senha.AutoSize = true;
-            cb_senha.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cb_senha.ForeColor = Color.FromArgb(0, 64, 0);
-            cb_senha.Location = new Point(14, 336);
-            cb_senha.Margin = new Padding(5, 4, 5, 4);
+            cb_senha.BackColor = Color.Transparent;
+            cb_senha.Font = new Font("Trebuchet MS", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cb_senha.ForeColor = Color.White;
+            cb_senha.Location = new Point(12, 252);
+            cb_senha.Margin = new Padding(4, 3, 4, 3);
             cb_senha.Name = "cb_senha";
-            cb_senha.Size = new Size(137, 24);
+            cb_senha.Size = new Size(118, 22);
             cb_senha.TabIndex = 6;
             cb_senha.Text = "Visualizar senha";
-            cb_senha.UseVisualStyleBackColor = true;
+            cb_senha.UseVisualStyleBackColor = false;
             cb_senha.CheckedChanged += cb_senha_CheckedChanged;
             // 
             // link_cadastro
             // 
-            link_cadastro.ActiveLinkColor = Color.FromArgb(27, 77, 46);
-            link_cadastro.BackColor = Color.DarkSeaGreen;
-            link_cadastro.DisabledLinkColor = Color.FromArgb(27, 77, 46);
+            link_cadastro.ActiveLinkColor = Color.White;
+            link_cadastro.BackColor = Color.Transparent;
+            link_cadastro.DisabledLinkColor = Color.White;
             link_cadastro.Font = new Font("Trebuchet MS", 8.25F);
-            link_cadastro.ForeColor = Color.Black;
-            link_cadastro.LinkColor = Color.FromArgb(27, 77, 46);
-            link_cadastro.Location = new Point(267, 392);
-            link_cadastro.Margin = new Padding(5, 0, 5, 0);
+            link_cadastro.ForeColor = Color.White;
+            link_cadastro.LinkColor = Color.White;
+            link_cadastro.Location = new Point(236, 294);
+            link_cadastro.Margin = new Padding(4, 0, 4, 0);
             link_cadastro.Name = "link_cadastro";
-            link_cadastro.Size = new Size(91, 76);
-            link_cadastro.TabIndex = 8;
+            link_cadastro.Size = new Size(80, 57);
+            link_cadastro.TabIndex = 0;
             link_cadastro.TabStop = true;
             link_cadastro.Text = "Faça seu cadastro aqui!";
             link_cadastro.TextAlign = ContentAlignment.MiddleCenter;
@@ -132,44 +133,52 @@
             // lbl_email
             // 
             lbl_email.AutoSize = true;
+            lbl_email.BackColor = Color.Transparent;
             lbl_email.Font = new Font("Trebuchet MS", 13F);
-            lbl_email.Location = new Point(14, 172);
-            lbl_email.Margin = new Padding(5, 0, 5, 0);
+            lbl_email.ForeColor = Color.White;
+            lbl_email.Location = new Point(12, 129);
+            lbl_email.Margin = new Padding(4, 0, 4, 0);
             lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(74, 27);
+            lbl_email.Size = new Size(60, 23);
             lbl_email.TabIndex = 3;
             lbl_email.Text = "Email:";
             // 
             // lbl_senha
             // 
             lbl_senha.AutoSize = true;
+            lbl_senha.BackColor = Color.Transparent;
             lbl_senha.Font = new Font("Trebuchet MS", 13F);
-            lbl_senha.Location = new Point(14, 252);
-            lbl_senha.Margin = new Padding(5, 0, 5, 0);
+            lbl_senha.ForeColor = Color.White;
+            lbl_senha.Location = new Point(12, 189);
+            lbl_senha.Margin = new Padding(4, 0, 4, 0);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(79, 27);
+            lbl_senha.Size = new Size(65, 23);
             lbl_senha.TabIndex = 4;
             lbl_senha.Text = "Senha:";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(0, 49);
-            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(0, 37);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(504, 38);
+            label1.Size = new Size(404, 29);
             label1.TabIndex = 13;
-            label1.Text = "Bem-vindo à Reciclagem que paga!";
+            label1.Text = "Bem-vindo à Reciclagem que Paga!";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(0, 107);
-            label4.Margin = new Padding(5, 0, 5, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(0, 80);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(365, 26);
+            label4.Size = new Size(283, 22);
             label4.TabIndex = 2;
             label4.Text = "Insira seu Login abaixo para continuar:";
             // 
@@ -177,19 +186,21 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(0, 568);
-            label5.Margin = new Padding(5, 0, 5, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(0, 436);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(451, 20);
+            label5.Size = new Size(357, 15);
             label5.TabIndex = 14;
             label5.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AcceptButton = btn_entrar;
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 453);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label1);
@@ -202,10 +213,11 @@
             Controls.Add(txb_senha);
             Controls.Add(txb_email);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(5, 4, 5, 4);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "LoginForm";
-            Text = "LoginForm";
+            Text = "Reciclagem que Paga - Login";
             Load += LoginForm_Load;
+            Paint += LoginForm_Paint;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

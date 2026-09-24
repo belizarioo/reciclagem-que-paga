@@ -36,7 +36,7 @@ namespace ReciclagemQuePaga.Forms
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            
+
 
             foreach (Control c in Controls)
             {
@@ -59,7 +59,7 @@ namespace ReciclagemQuePaga.Forms
             string email = txb_email.Text;
             string senha = txb_senha.Text;
 
-            if(txb_confirmar_senha.Text != senha)
+            if (txb_confirmar_senha.Text != senha)
             {
                 MessageBox.Show("As senhas digitas não coincidem!");
                 return;
@@ -76,11 +76,11 @@ namespace ReciclagemQuePaga.Forms
                 loginForm.Show();
                 this.Hide();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao realizar o cadastro: {ex.Message}");
             }
-            
+
         }
 
         private void voltar_telalogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -113,6 +113,28 @@ namespace ReciclagemQuePaga.Forms
 
         private void lbl_nome_Click(object sender, EventArgs e)
         {
+        }
+
+        private void CadastroForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CadastroForm_Paint(object sender, PaintEventArgs e)
+        {
+            
+            Color corInicio = Color.FromArgb(195, 212, 200);
+            Color corFim = Color.FromArgb(27, 77, 46);       
+
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
+                new System.Drawing.Drawing2D.LinearGradientBrush(
+                    this.ClientRectangle,
+                    corInicio,
+                    corFim,
+                    System.Drawing.Drawing2D.LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
     }
 }

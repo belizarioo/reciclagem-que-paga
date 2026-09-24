@@ -10,7 +10,7 @@ namespace ReciclagemQuePaga
         private readonly MaterialService _materialService;
         private readonly TransacaoService _transacaoService;
 
-        
+
 
         public LoginForm(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService)
         {
@@ -118,7 +118,25 @@ namespace ReciclagemQuePaga
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
+
+        }
+
+        private void LoginForm_Paint(object sender, PaintEventArgs e)
+        {
+            Color corInicio = Color.FromArgb(195, 212, 200); // Verde-cinza claro
+            Color corFim = Color.FromArgb(27, 77, 46);       // Verde escuro da marca
+
+            // Cria o pincel de gradiente cobrindo todo o retângulo da tela
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
+                new System.Drawing.Drawing2D.LinearGradientBrush(
+                    this.ClientRectangle,
+                    corInicio,
+                    corFim,
+                    System.Drawing.Drawing2D.LinearGradientMode.Vertical)) // Sentido: De cima para baixo
+            {
+                // Pinta o fundo da tela
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
     }
 

@@ -31,7 +31,7 @@ namespace ReciclagemQuePaga.Forms
             lbl_nU.Text = $"Olá, {_usuarioLogado.nome_usuario}!";
         }
 
-       
+
         bool menuAberto = true;
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -96,7 +96,18 @@ namespace ReciclagemQuePaga.Forms
 
         private void painel_principal_Paint(object sender, PaintEventArgs e)
         {
-            painel_principal.Dock = DockStyle.Fill;
+            Color corInicio = Color.FromArgb(40, 90, 55); // Verde bem clarinho/suave para a área central
+            Color corFim = Color.FromArgb(120, 185, 130);    // Verde-cinza médio na base
+
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
+                new System.Drawing.Drawing2D.LinearGradientBrush(
+                    this.ClientRectangle,
+                    corInicio,
+                    corFim,
+                    System.Drawing.Drawing2D.LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -285,5 +296,7 @@ namespace ReciclagemQuePaga.Forms
         }
 
        
+        }
     }
-}
+
+
