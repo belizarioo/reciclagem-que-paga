@@ -176,6 +176,7 @@
             btn_início.TabIndex = 4;
             btn_início.Text = "Início";
             btn_início.UseVisualStyleBackColor = false;
+            btn_início.Click += btn_início_Click;
             // 
             // flowLayoutPanel3
             // 
@@ -331,7 +332,7 @@
             painel_principal.Controls.Add(flow);
             painel_principal.Location = new Point(156, 29);
             painel_principal.Name = "painel_principal";
-            painel_principal.Size = new Size(636, 421);
+            painel_principal.Size = new Size(636, 424);
             painel_principal.TabIndex = 2;
             painel_principal.Paint += painel_principal_Paint;
             // 
@@ -339,7 +340,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(279, 406);
+            label5.Location = new Point(279, 409);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(357, 15);
@@ -348,6 +349,7 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(6, 20);
             pictureBox6.Name = "pictureBox6";
@@ -358,6 +360,7 @@
             // lbl_nU
             // 
             lbl_nU.AutoSize = true;
+            lbl_nU.BackColor = Color.Transparent;
             lbl_nU.Font = new Font("Segoe UI", 14F);
             lbl_nU.Location = new Point(50, 26);
             lbl_nU.Name = "lbl_nU";
@@ -368,10 +371,11 @@
             // flow
             // 
             flow.Anchor = AnchorStyles.None;
+            flow.BackColor = Color.Transparent;
             flow.Controls.Add(painel_simula);
             flow.Controls.Add(painel_historico);
             flow.Controls.Add(painel_saldo);
-            flow.Location = new Point(1, 94);
+            flow.Location = new Point(1, 96);
             flow.Margin = new Padding(14, 4, 14, 4);
             flow.Name = "flow";
             flow.RightToLeft = RightToLeft.No;
@@ -618,7 +622,6 @@
             Name = "TelaInicial";
             Text = "Reciclagem que Paga";
             FormClosed += TelaInicial_FormClosed;
-            Load += TelaInicial_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_ham).EndInit();
             menu_lateral.ResumeLayout(false);

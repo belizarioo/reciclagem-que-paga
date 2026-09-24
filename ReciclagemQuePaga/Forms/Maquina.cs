@@ -108,7 +108,8 @@ namespace ReciclagemQuePaga.Forms
         private void btn_confirmar_Click(object sender, EventArgs e)
         {
             Material? materialEscolhido = cmb_material.SelectedItem as Material;
-            bool deuCerto = decimal.TryParse(txb_peso.Text, out decimal peso);
+            bool deuCerto = decimal.TryParse(txb_peso.Text, out decimal peso); 
+            
 
             if (materialEscolhido != null && deuCerto && peso > 0)
             {
@@ -118,7 +119,14 @@ namespace ReciclagemQuePaga.Forms
 
                 _transacaoService.RegistrarTransacao(transacao);
 
-                MessageBox.Show("Transação feita com sucesso");
+                 MessageBox.Show(
+                 $"♻️ Reciclagem concluída!\n\n" +
+                 $"Peso Reciclado: {peso} kg\n" +
+                 $"Valor ganho: R$ {resultado}\n\n" +
+                 "Obrigado por contribuir com a reciclagem! 🌱",
+                 "Reciclagem realizada");
+
+
                 LimparCampos(sender, e);
 
             }
@@ -132,7 +140,19 @@ namespace ReciclagemQuePaga.Forms
 
         private void txb_peso_TextChanged(object sender, EventArgs e)
         {
+            string texto = txb_peso.Text;
+
+            string permitido = new string( texto.Where(c => char.IsDigit(c) || c == ',').ToArray() );
+
+            if (texto != permitido)
+            {
+                txb_peso.Text = permitido;
+                txb_peso.SelectionStart = txb_peso.Text.Length;
+            }
+
             CalcularTotal();
         }
+
+      
     }
 }

@@ -10,7 +10,7 @@ namespace ReciclagemQuePaga
         private readonly MaterialService _materialService;
         private readonly TransacaoService _transacaoService;
 
-        
+
 
         public LoginForm(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService)
         {
