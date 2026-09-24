@@ -59,7 +59,7 @@ namespace ReciclagemQuePaga
             {
                 if (BCrypt.Net.BCrypt.Verify(senha, usuario.senha_usuario))
                 {
-
+                    LimparCampos();
                     TelaInicial form = new TelaInicial(_usuarioService, _materialService, _transacaoService, usuario);
                     form.Name = "telaInicial";
                     form.Show();
@@ -100,6 +100,8 @@ namespace ReciclagemQuePaga
 
             CadastroForm form1 = (CadastroForm)Application.OpenForms["cadastroForm"];
 
+            LimparCampos();
+
             if (form1 == null)
             {
                 form1 = new CadastroForm(_usuarioService, _materialService, _transacaoService, usuario);
@@ -137,6 +139,11 @@ namespace ReciclagemQuePaga
                 // Pinta o fundo da tela
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

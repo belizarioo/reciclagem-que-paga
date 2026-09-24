@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {}
+    "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
+    "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
         "projectName": "ReciclagemQuePaga",
-        "projectPath": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
-        "packagesPath": "C:\\Users\\henrique.bsilva25\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\ReciclagemQuePaga\\obj\\",
+        "projectPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\henrique.bsilva25\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,6 +78,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -91,20 +108,20 @@
         }
       }
     },
-    "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {
+    "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
         "projectName": "Testes-reciclagemQuePaga",
-        "projectPath": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
-        "packagesPath": "C:\\Users\\henrique.bsilva25\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\Testes-reciclagemQuePaga\\obj\\",
+        "projectPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\henrique.bsilva25\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -113,7 +130,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -121,8 +137,8 @@
             "framework": "net8.0-windows7.0",
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
-                "projectPath": "C:\\Users\\henrique.bsilva25\\OneDrive\\reciclagemQuePaga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj"
+              "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
+                "projectPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj"
               }
             }
           }
@@ -176,6 +192,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

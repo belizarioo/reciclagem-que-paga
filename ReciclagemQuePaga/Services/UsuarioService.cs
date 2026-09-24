@@ -18,6 +18,7 @@ namespace ReciclagemQuePaga.Services
 
         public void CadastroUsuario(Usuario usuario)
         {
+
             if (String.IsNullOrWhiteSpace(usuario.nome_usuario) || String.IsNullOrWhiteSpace(usuario.email_usuario) || String.IsNullOrWhiteSpace(usuario.senha_usuario))
             {
                 throw new ArgumentException("Preencha todos os campos"); 

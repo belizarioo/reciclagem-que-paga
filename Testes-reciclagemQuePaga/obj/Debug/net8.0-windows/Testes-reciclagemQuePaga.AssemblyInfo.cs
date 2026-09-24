@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Testes-reciclagemQuePaga")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fdbeb44639a4986be8082c80c5f63e9fece3c60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03b397ce1038bbe59196bce0493dbbfa722b657f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Testes-reciclagemQuePaga")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Testes-reciclagemQuePaga")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

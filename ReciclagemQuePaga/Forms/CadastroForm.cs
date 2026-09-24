@@ -28,6 +28,14 @@ namespace ReciclagemQuePaga.Forms
             _usuarioLogado = usuarioLogado;
         }
 
+        private void LimparCampos()
+        {
+            txb_nome.Clear();
+            msk_txb_cpf.Clear();
+            txb_email.Clear();
+            txb_senha.Clear();
+            if(txb_confirmar_senha != null) txb_confirmar_senha.Clear();
+        }
 
         private void CadastroForm_Load_1(object sender, EventArgs e)
         {
@@ -36,7 +44,6 @@ namespace ReciclagemQuePaga.Forms
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-
 
             foreach (Control c in Controls)
             {
@@ -70,6 +77,8 @@ namespace ReciclagemQuePaga.Forms
                 _usuarioService.CadastroUsuario(new Usuario(nome, email, senha, cpf));
                 MessageBox.Show("Usuario Cadastrado com sucesso");
 
+                LimparCampos();
+
                 LoginForm loginForm = new LoginForm(_usuarioService, _materialService, _transacaoService);
                 loginForm.Show();
                 this.Hide();
@@ -83,6 +92,8 @@ namespace ReciclagemQuePaga.Forms
 
         private void voltar_telalogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            LimparCampos();
+            
             LoginForm form1 = (LoginForm)Application.OpenForms["loginForm"];
 
             if (form1 == null)
@@ -111,6 +122,7 @@ namespace ReciclagemQuePaga.Forms
 
         private void lbl_nome_Click(object sender, EventArgs e)
         {
+            
         }
 
         private void CadastroForm_FormClosed(object sender, FormClosedEventArgs e)

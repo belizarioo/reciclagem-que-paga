@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,19 @@ namespace ReciclagemQuePaga.Data
         }
         public void Cadastrar(Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
-            _context.SaveChanges();
+            try
+            {
+                _context.Usuarios.Add(usuario);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                var erroReal = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                MessageBox.Show("Erro do Banco: " + erroReal);
+            }
+
         }
+        
 
         public Usuario? BuscarPorId(int id)
         {
