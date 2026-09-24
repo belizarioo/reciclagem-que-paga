@@ -58,7 +58,7 @@ namespace ReciclagemQuePaga.Forms
             string cpf = msk_txb_cpf.Text.Replace(".", "").Replace("-", "").Trim();
             string email = txb_email.Text;
             string senha = txb_senha.Text;
-
+            
             if(txb_confirmar_senha.Text != senha)
             {
                 MessageBox.Show("As senhas digitas não coincidem!");
@@ -67,9 +67,7 @@ namespace ReciclagemQuePaga.Forms
 
             try
             {
-                string senhaHash = BCrypt.Net.BCrypt.HashPassword(senha);
-
-                _usuarioService.CadastroUsuario(new Usuario(nome, email, senhaHash, cpf));
+                _usuarioService.CadastroUsuario(new Usuario(nome, email, senha, cpf));
                 MessageBox.Show("Usuario Cadastrado com sucesso");
 
                 LoginForm loginForm = new LoginForm(_usuarioService, _materialService, _transacaoService);

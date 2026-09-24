@@ -118,12 +118,7 @@ namespace ReciclagemQuePaga
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 
