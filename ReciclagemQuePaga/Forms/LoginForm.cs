@@ -10,7 +10,7 @@ namespace ReciclagemQuePaga
         private readonly MaterialService _materialService;
         private readonly TransacaoService _transacaoService;
 
-        
+
 
         public LoginForm(UsuarioService usuarioService, MaterialService materialService, TransacaoService transacaoService)
         {
@@ -118,7 +118,12 @@ namespace ReciclagemQuePaga
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

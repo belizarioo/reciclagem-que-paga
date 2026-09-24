@@ -73,13 +73,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgw_historico.DefaultCellStyle = dataGridViewCellStyle3;
             dgw_historico.EnableHeadersVisualStyles = false;
-            dgw_historico.Location = new Point(14, 159);
-            dgw_historico.Margin = new Padding(3, 4, 3, 4);
+            dgw_historico.Location = new Point(12, 119);
             dgw_historico.Name = "dgw_historico";
             dgw_historico.RowHeadersVisible = false;
             dgw_historico.RowHeadersWidth = 51;
-            dgw_historico.Size = new Size(887, 399);
+            dgw_historico.Size = new Size(776, 299);
             dgw_historico.TabIndex = 0;
+            dgw_historico.CellContentClick += dgw_historico_CellContentClick;
             // 
             // dh
             // 
@@ -119,10 +119,9 @@
             // btn_tI
             // 
             btn_tI.Font = new Font("Trebuchet MS", 9F);
-            btn_tI.Location = new Point(815, 16);
-            btn_tI.Margin = new Padding(3, 4, 3, 4);
+            btn_tI.Location = new Point(713, 12);
             btn_tI.Name = "btn_tI";
-            btn_tI.Size = new Size(86, 31);
+            btn_tI.Size = new Size(75, 23);
             btn_tI.TabIndex = 9;
             btn_tI.Text = "Voltar";
             btn_tI.UseVisualStyleBackColor = true;
@@ -132,9 +131,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 25F);
-            label1.Location = new Point(14, 32);
+            label1.Location = new Point(12, 24);
             label1.Name = "label1";
-            label1.Size = new Size(424, 52);
+            label1.Size = new Size(343, 43);
             label1.TabIndex = 10;
             label1.Text = "Histórico de Entregas";
             // 
@@ -142,9 +141,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 10F);
-            label2.Location = new Point(24, 89);
+            label2.Location = new Point(21, 67);
             label2.Name = "label2";
-            label2.Size = new Size(320, 23);
+            label2.Size = new Size(259, 18);
             label2.TabIndex = 11;
             label2.Text = "Confira suas entregas realizadas abaixo:";
             // 
@@ -152,30 +151,29 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Location = new Point(493, 573);
-            label6.Margin = new Padding(5, 0, 5, 0);
+            label6.Location = new Point(431, 430);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(451, 20);
+            label6.Size = new Size(357, 15);
             label6.TabIndex = 17;
             label6.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(385, 3);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(337, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(39, 44);
+            pictureBox1.Size = new Size(34, 33);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
             // Historico
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(195, 212, 200);
-            ClientSize = new Size(911, 600);
+            ClientSize = new Size(797, 450);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(label2);
@@ -183,7 +181,6 @@
             Controls.Add(btn_tI);
             Controls.Add(dgw_historico);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Historico";
             Text = "Histórico";
             Activated += Historico_Activated;

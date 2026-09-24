@@ -31,7 +31,7 @@ namespace ReciclagemQuePaga.Forms
             lbl_nU.Text = $"Olá, {_usuarioLogado.nome_usuario}!";
         }
 
-       
+
         bool menuAberto = true;
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -66,9 +66,9 @@ namespace ReciclagemQuePaga.Forms
             timer1.Start();
         }
 
-        private void TelaInicial_Load(object sender, EventArgs e)
+        private void TelaInicial_Paint(object sender, PaintEventArgs e)
         {
-
+         
         }
 
         private void TelaInicial_FormClosed(object sender, FormClosedEventArgs e)
@@ -96,7 +96,8 @@ namespace ReciclagemQuePaga.Forms
 
         private void painel_principal_Paint(object sender, PaintEventArgs e)
         {
-            painel_principal.Dock = DockStyle.Fill;
+        
+              painel_principal.Dock = DockStyle.Fill;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -284,6 +285,9 @@ namespace ReciclagemQuePaga.Forms
 
         }
 
-       
+        private void btn_início_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

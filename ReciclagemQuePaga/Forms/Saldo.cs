@@ -80,14 +80,33 @@ namespace ReciclagemQuePaga.Forms
                 return;
             }
 
-            decimal valorResgatado = _usuarioLogado.saldo_usuario;
+                    DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente realizar esse Resgate",
+                    "",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                    );
 
-            _usuarioLogado.saldo_usuario = 0;
-            _usuarioService.AtualizarUsuario(_usuarioLogado);
+                if (resultado == DialogResult.Yes)
+                {
+                decimal valorResgatado = _usuarioLogado.saldo_usuario;
 
-            lbl_saldo.Text = "R$ 0,00";
+                _usuarioLogado.saldo_usuario = 0;
+                _usuarioService.AtualizarUsuario(_usuarioLogado);
 
-            MessageBox.Show($"R$ {valorResgatado:N2} resgatado com sucesso!");
+                lbl_saldo.Text = "R$ 0,00";
+
+                MessageBox.Show($"R$ {valorResgatado:N2} resgatado com sucesso!");
+                 }
+
+
+                else
+                {
+
+                return;
+
+                }
+
         }
 
         private void Saldo_Activated(object sender, EventArgs e)
