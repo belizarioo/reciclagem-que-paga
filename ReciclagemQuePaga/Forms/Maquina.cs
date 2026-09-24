@@ -116,9 +116,6 @@ namespace ReciclagemQuePaga.Forms
 
                 Transacao transacao = new Transacao(_usuarioLogado.usuario_id, materialEscolhido.material_id, resultado, peso, DateTime.Now);
 
-                _usuarioLogado.saldo_usuario += resultado;
-                _usuarioService.AtualizarUsuario(_usuarioLogado);
-
                 _transacaoService.RegistrarTransacao(transacao);
 
                 MessageBox.Show("Transação feita com sucesso");
