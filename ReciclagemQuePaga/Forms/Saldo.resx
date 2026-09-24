@@ -310,7 +310,7 @@
   <data name="btn_Resgatar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANhSURBVFhH1ddp
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANhSURBVFhH1ddp
         yKZTGAfwGdQ0yBjNNCa7lKUphFH4oMwn2crMlA++zJSyzBdZQkozkyUhyRZJIoVI+EL2LNkiDJE1ypJd
         dn76c92v+znv87zzzMzblH9ddd/nXOec/znn2s6MGZsAzMYafIrf8T4ewy24ECfjCOyMBTgb5/ZkRTvn
         2MAeeB0P1yI74iAsxVm4Fg9hHX7GX/gEN5bcCploaxyDZRsgK/AFnsfyXvuJ2LUlG2BlyPb+53YEHsWr
@@ -331,7 +331,7 @@
   <data name="btn_ver.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM1SURBVFhHrZdb
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM1SURBVFhHrZdb
         iE5RFMcHU8plxowZMyaRcYkY5JZLmBiRBxmSS3gYIaZBuc+DPIxBSUImJE2S8KDw5FISpVDUCBk8eJJL
         8UQuP/21Pu2znJPvMv9afefsvfZa/73WWWvvLy/PAEwGXgOvcpAvQF3KZkYALgJz/XgmAG4DPzMiAXQC
         5gCPgNF+PhMYASF9EsByWyR0FIH0SQDbO5DAscCWIBLzvF4E6RJQqvyYB9AFGAOMM9kHNHq9CDwBYApw
@@ -351,7 +351,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGWdSURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGWdSURBVHhe7d0J
         dBTXnS9+JpPMzHv/mcySOXnz/hkn44mTeGLHie0sXrETb2olduwYSWySWMW+b8ZsQk5iO7a1gQFJIPZF
         7EgIsS8SOxJCrR2EBAi0EO8bqFv4vvMrISzubUlVXXWrbnd/f+d8zpyXZ6qr+6ru71e3bt3bowcCESLx
         yu5Xnh2fN37byOyRTcO2Dft80OZBrQM3Dvwybmvc9RHbRnw4evvoM5N3TZ4efzz+m/y/RQRPsPKIv2PF

@@ -340,6 +340,8 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(279, 406);
             label5.Location = new Point(279, 409);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
@@ -362,6 +364,7 @@
             lbl_nU.AutoSize = true;
             lbl_nU.BackColor = Color.Transparent;
             lbl_nU.Font = new Font("Segoe UI", 14F);
+            lbl_nU.ForeColor = Color.White;
             lbl_nU.Location = new Point(50, 26);
             lbl_nU.Name = "lbl_nU";
             lbl_nU.Size = new Size(0, 25);
@@ -384,7 +387,7 @@
             // 
             // painel_simula
             // 
-            painel_simula.BackColor = Color.DarkSeaGreen;
+            painel_simula.BackColor = Color.ForestGreen;
             painel_simula.BorderStyle = BorderStyle.FixedSingle;
             painel_simula.Controls.Add(label4);
             painel_simula.Controls.Add(label2);
@@ -400,7 +403,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.DarkSeaGreen;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Trebuchet MS", 12F);
             label4.ForeColor = SystemColors.Window;
             label4.Location = new Point(3, 78);
@@ -412,7 +415,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.DarkSeaGreen;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Trebuchet MS", 11.25F);
             label2.ForeColor = SystemColors.Window;
             label2.Location = new Point(3, 39);
@@ -425,7 +428,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 14F);
-            label1.ForeColor = Color.FromArgb(192, 255, 192);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(3, 9);
             label1.Name = "label1";
             label1.Size = new Size(199, 24);
@@ -459,7 +462,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.DarkSeaGreen;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Trebuchet MS", 12F);
             label3.ForeColor = SystemColors.Window;
             label3.Location = new Point(-4, 56);
@@ -614,13 +617,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btn_sair;
             ClientSize = new Size(792, 453);
             Controls.Add(painel_principal);
             Controls.Add(menu_lateral);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaInicial";
-            Text = "Reciclagem que Paga";
+            Text = "Tela Inicial - Bem Vindo!";
             FormClosed += TelaInicial_FormClosed;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_ham).EndInit();

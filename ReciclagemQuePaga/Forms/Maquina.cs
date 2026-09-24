@@ -153,6 +153,21 @@ namespace ReciclagemQuePaga.Forms
             CalcularTotal();
         }
 
-      
+        private void Maquina_Paint(object sender, PaintEventArgs e)
+        {
+            // Mesmas cores padrão com degradê nítido
+            Color corInicio = Color.FromArgb(120, 185, 130);    // Verde escuro no topo
+            Color corFim = Color.FromArgb(20, 55, 30);    // Verde mais claro na base
+
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
+                new System.Drawing.Drawing2D.LinearGradientBrush(
+                    this.ClientRectangle,
+                    corInicio,
+                    corFim,
+                    System.Drawing.Drawing2D.LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
     }
 }

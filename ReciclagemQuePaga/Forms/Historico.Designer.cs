@@ -130,7 +130,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Trebuchet MS", 25F);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(12, 24);
             label1.Name = "label1";
             label1.Size = new Size(343, 43);
@@ -140,7 +142,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Trebuchet MS", 10F);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(21, 67);
             label2.Name = "label2";
             label2.Size = new Size(259, 18);
@@ -151,6 +155,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
+            label6.ForeColor = Color.White;
             label6.Location = new Point(431, 430);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
@@ -160,6 +165,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(337, 2);
             pictureBox1.Name = "pictureBox1";
@@ -173,6 +179,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(195, 212, 200);
+            CancelButton = btn_tI;
             ClientSize = new Size(797, 450);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
@@ -184,6 +191,7 @@
             Name = "Historico";
             Text = "Histórico";
             Activated += Historico_Activated;
+            Paint += Historico_Paint;
             ((System.ComponentModel.ISupportInitialize)dgw_historico).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
