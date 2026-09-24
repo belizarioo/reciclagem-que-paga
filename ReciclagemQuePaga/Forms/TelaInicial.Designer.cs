@@ -176,6 +176,7 @@
             btn_início.TabIndex = 4;
             btn_início.Text = "Início";
             btn_início.UseVisualStyleBackColor = false;
+            btn_início.Click += btn_início_Click;
             // 
             // flowLayoutPanel3
             // 
@@ -341,6 +342,7 @@
             label5.BackColor = Color.Transparent;
             label5.ForeColor = Color.White;
             label5.Location = new Point(279, 406);
+            label5.Location = new Point(279, 409);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(357, 15);
@@ -624,7 +626,6 @@
             Name = "TelaInicial";
             Text = "Tela Inicial - Bem Vindo!";
             FormClosed += TelaInicial_FormClosed;
-            Load += TelaInicial_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_ham).EndInit();
             menu_lateral.ResumeLayout(false);

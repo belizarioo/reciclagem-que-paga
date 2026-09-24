@@ -62,7 +62,12 @@ namespace ReciclagemQuePaga.Forms
             dgw_historico.Columns[3].DataPropertyName = "valor_transacao";
 
             int usuarioId = _usuarioLogado.usuario_id;
-            dgw_historico.DataSource = _transacaoService.ListarTransacoes(usuarioId);
+            dgw_historico.DataSource = _transacaoService.ListarTransacoes(usuarioId).OrderByDescending(t => t.data_hora_transacao).ToList();
+        }
+
+        private void dgw_historico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void Historico_Paint(object sender, PaintEventArgs e)

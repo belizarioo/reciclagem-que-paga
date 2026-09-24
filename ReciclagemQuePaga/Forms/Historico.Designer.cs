@@ -79,6 +79,7 @@
             dgw_historico.RowHeadersWidth = 51;
             dgw_historico.Size = new Size(776, 299);
             dgw_historico.TabIndex = 0;
+            dgw_historico.CellContentClick += dgw_historico_CellContentClick;
             // 
             // dh
             // 
@@ -168,7 +169,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(337, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(35, 33);
+            pictureBox1.Size = new Size(34, 33);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;

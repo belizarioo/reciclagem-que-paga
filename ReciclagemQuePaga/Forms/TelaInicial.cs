@@ -66,9 +66,9 @@ namespace ReciclagemQuePaga.Forms
             timer1.Start();
         }
 
-        private void TelaInicial_Load(object sender, EventArgs e)
+        private void TelaInicial_Paint(object sender, PaintEventArgs e)
         {
-
+         
         }
 
         private void TelaInicial_FormClosed(object sender, FormClosedEventArgs e)
@@ -96,18 +96,8 @@ namespace ReciclagemQuePaga.Forms
 
         private void painel_principal_Paint(object sender, PaintEventArgs e)
         {
-            Color corInicio = Color.FromArgb(40, 90, 55); // Verde bem clarinho/suave para a área central
-            Color corFim = Color.FromArgb(120, 185, 130);    // Verde-cinza médio na base
-
-            using (System.Drawing.Drawing2D.LinearGradientBrush brush =
-                new System.Drawing.Drawing2D.LinearGradientBrush(
-                    this.ClientRectangle,
-                    corInicio,
-                    corFim,
-                    System.Drawing.Drawing2D.LinearGradientMode.Vertical))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
+        
+              painel_principal.Dock = DockStyle.Fill;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -295,7 +285,9 @@ namespace ReciclagemQuePaga.Forms
 
         }
 
-       
+        private void btn_início_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 
