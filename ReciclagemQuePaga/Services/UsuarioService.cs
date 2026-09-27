@@ -19,7 +19,7 @@ namespace ReciclagemQuePaga.Services
         public void CadastroUsuario(Usuario usuario)
         {
 
-            if (String.IsNullOrWhiteSpace(usuario.nome_usuario) || String.IsNullOrWhiteSpace(usuario.email_usuario) || String.IsNullOrWhiteSpace(usuario.senha_usuario))
+            if (String.IsNullOrWhiteSpace(usuario.nome_usuario) || String.IsNullOrWhiteSpace(usuario.email_usuario) || String.IsNullOrWhiteSpace(usuario.cpf_usuario) || String.IsNullOrWhiteSpace(usuario.senha_usuario))
             {
                 throw new ArgumentException("Preencha todos os campos"); 
             }
@@ -27,6 +27,11 @@ namespace ReciclagemQuePaga.Services
             if(BuscarPorEmail(usuario.email_usuario) != null)
             {
                 throw new InvalidOperationException("Email já cadastrado.");
+            }
+
+            if(BuscarPorCpf(usuario.cpf_usuario) != null)
+            {
+                throw new InvalidOperationException("Cpf já cadastrado.");
             }
 
             usuario.senha_usuario = BCrypt.Net.BCrypt.HashPassword(usuario.senha_usuario);
@@ -41,6 +46,11 @@ namespace ReciclagemQuePaga.Services
         public Usuario? BuscarPorId(int id)
         {
             return _repository.BuscarPorId(id);
+        }
+
+        public Usuario? BuscarPorCpf(string cpf)
+        {
+            return _repository.BuscarPorCpf(cpf);
         }
 
         public void AtualizarUsuario(Usuario usuario)

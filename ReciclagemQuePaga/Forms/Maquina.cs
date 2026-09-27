@@ -117,17 +117,31 @@ namespace ReciclagemQuePaga.Forms
 
                 Transacao transacao = new Transacao(_usuarioLogado.usuario_id, materialEscolhido.material_id, resultado, peso, DateTime.Now);
 
-                _transacaoService.RegistrarTransacao(transacao);
+                try
+                {
+                    _transacaoService.RegistrarTransacao(transacao);
 
-                 MessageBox.Show(
-                 $"♻️ Reciclagem concluída!\n\n" +
-                 $"Peso Reciclado: {peso} kg\n" +
-                 $"Valor ganho: R$ {resultado}\n\n" +
-                 "Obrigado por contribuir com a reciclagem! 🌱",
-                 "Reciclagem realizada");
+                    MessageBox.Show(
+                    $"♻️ Reciclagem concluída!\n\n" +
+                    $"Peso Reciclado: {peso} kg\n" +
+                    $"Valor ganho: R$ {transacao.valor_transacao:C2}\n\n" +
+                    "Obrigado por contribuir com a reciclagem! 🌱",
+                    "Reciclagem realizada");
 
-
-                LimparCampos(sender, e);
+                    LimparCampos(sender, e);
+                }
+                catch(ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                catch(InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Não foi possível registrar a reciclagem. Verifique a conexão com o banco.");
+                }
 
             }
             else

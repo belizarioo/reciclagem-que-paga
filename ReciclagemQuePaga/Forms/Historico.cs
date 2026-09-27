@@ -60,6 +60,7 @@ namespace ReciclagemQuePaga.Forms
             dgw_historico.Columns[1].DataPropertyName = "tipo_material";
             dgw_historico.Columns[2].DataPropertyName = "peso_transacao";
             dgw_historico.Columns[3].DataPropertyName = "valor_transacao";
+            dgw_historico.Columns[3].DefaultCellStyle.Format = "C2";
 
             int usuarioId = _usuarioLogado.usuario_id;
             dgw_historico.DataSource = _transacaoService.ListarTransacoes(usuarioId).OrderByDescending(t => t.data_hora_transacao).ToList();

@@ -29,6 +29,11 @@ namespace ReciclagemQuePaga.Services
                 throw new ArgumentException("O peso deve ser maior do que Zero.");
             }
 
+            if(transacao.peso_transacao > 1000m)
+            {
+                throw new ArgumentException("Peso limite de 1000Kg");
+            }
+
             Usuario? usuario = _usuarioService.BuscarPorId(transacao.usuario_id);
 
             if(usuario == null)

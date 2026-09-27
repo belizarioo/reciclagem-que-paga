@@ -52,7 +52,6 @@ namespace ReciclagemQuePaga.Forms
                     MessageBox.Show("Preencha todos os campos obrigatórios!");
                     return;
                 }
-                continue;
             }
 
             if (!msk_txb_cpf.MaskCompleted)
@@ -83,9 +82,13 @@ namespace ReciclagemQuePaga.Forms
                 loginForm.Show();
                 this.Hide();
             }
-            catch (Exception ex)
+            catch(InvalidOperationException ex)
             {
-                MessageBox.Show($"Erro ao realizar o cadastro: {ex.Message}");
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possivel realizar o cadastro. Verifique o e-mail, CPF e a conexão com o banco.");
             }
 
         }
