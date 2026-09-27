@@ -53,28 +53,35 @@ namespace ReciclagemQuePaga
             string email = txb_email.Text;
             string senha = txb_senha.Text;
 
-            Usuario? usuario = _usuarioService.BuscarPorEmail(email);
-
-            if (usuario != null)
+            try
             {
-                if (BCrypt.Net.BCrypt.Verify(senha, usuario.senha_usuario))
+                Usuario? usuario = _usuarioService.BuscarPorEmail(email);
+
+                if (usuario != null)
                 {
-                    LimparCampos();
-                    TelaInicial form = new TelaInicial(_usuarioService, _materialService, _transacaoService, usuario);
-                    form.Name = "telaInicial";
-                    form.Show();
-                    this.Hide();
+                    if (BCrypt.Net.BCrypt.Verify(senha, usuario.senha_usuario))
+                    {
+                        LimparCampos();
+                        TelaInicial form = new TelaInicial(_usuarioService, _materialService, _transacaoService, usuario);
+                        form.Name = "telaInicial";
+                        form.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senha incorreta");
+                        txb_senha.Clear();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Senha incorreta");
-                    txb_senha.Clear();
+                    MessageBox.Show("Usuario não encontrado, tente um email diferente");
+                    LimparCampos();
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Usuario não encontrado, tente um email diferente");
-                LimparCampos();
+                MessageBox.Show("Não foi possivel realizar o login. Verifique a conexão com o banco");
             }
         }
 

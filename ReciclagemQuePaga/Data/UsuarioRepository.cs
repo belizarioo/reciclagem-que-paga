@@ -21,12 +21,11 @@ namespace ReciclagemQuePaga.Data
                 _context.Usuarios.Add(usuario);
                 _context.SaveChanges();
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
-                var erroReal = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                MessageBox.Show("Erro do Banco: " + erroReal);
+                _context.Entry(usuario).State = EntityState.Detached;
+                throw;
             }
-
         }
         
 
@@ -38,6 +37,11 @@ namespace ReciclagemQuePaga.Data
         public Usuario? BuscarPorEmail(string email)
         {
             return _context.Usuarios.FirstOrDefault(u => u.email_usuario == email);
+        }
+
+        public Usuario? BuscarPorCpf(string cpf)
+        {
+            return _context.Usuarios.FirstOrDefault(u => u.cpf_usuario == cpf);
         }
 
         public void AtualizarUsuario(Usuario usuario)

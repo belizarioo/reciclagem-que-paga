@@ -196,6 +196,20 @@ namespace ReciclagemQuePaga.Forms
 
             logoutEmAndamento = true;
 
+            string[] telasParaFechar = ["maquina", "saldo", "historico"];
+
+            foreach(string nomeTela in telasParaFechar)
+            {
+                Form? tela = Application.OpenForms[nomeTela];
+
+                if(tela != null)
+                {
+                    tela.Close();
+                }
+
+            }
+
+
             LoginForm loginForm = (LoginForm)Application.OpenForms["loginForm"];
 
             if (loginForm == null)
@@ -216,7 +230,7 @@ namespace ReciclagemQuePaga.Forms
         private void btn_maquina2_Click(object sender, EventArgs e)
         {
 
-            Maquina form = (Maquina)Application.OpenForms["maquina"];
+            Maquina? form = (Maquina)Application.OpenForms["maquina"];
 
 
 
@@ -238,7 +252,7 @@ namespace ReciclagemQuePaga.Forms
 
         private void btn_historico2_Click(object sender, EventArgs e)
         {
-            Historico form = (Historico)Application.OpenForms["historico"];
+            Historico? form = (Historico)Application.OpenForms["historico"];
 
 
 
