@@ -33,10 +33,10 @@ CREATE TABLE Transacoes
 
 INSERT INTO Materiais(tipo_material, preco_material_por_kilo)
 VALUES
-	('Papelão', 0.80),
-	('Papel', 0.60),
-	('Plástico', 1.50),
-	('Alumínio', 4.50),
-	('Cobre', 25.00),
+	('Papelão', 0.40),
+	('Papel', 0.85),
+	('Plástico', 5.00),
+	('Alumínio', 9.50),
+	('Cobre', 45.00),
 	('Ferro', 0.90),
-	('Vidro', 0.30);
+	('Vidro', 0.65);

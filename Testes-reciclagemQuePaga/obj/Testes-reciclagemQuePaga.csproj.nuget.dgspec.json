@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {}
+    "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
+    "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
+        "projectUniqueName": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
         "projectName": "ReciclagemQuePaga",
-        "projectPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
-        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\obj\\",
+        "projectPath": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj",
+        "packagesPath": "C:\\Users\\Cliente\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\ReciclagemQuePaga\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -81,19 +81,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             }
           ],
           "frameworkReferences": {
@@ -104,24 +104,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {
+    "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
+        "projectUniqueName": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
         "projectName": "Testes-reciclagemQuePaga",
-        "projectPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
-        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\Testes-reciclagemQuePaga\\obj\\",
+        "projectPath": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\Testes-reciclagemQuePaga\\Testes-reciclagemQuePaga.csproj",
+        "packagesPath": "C:\\Users\\Cliente\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\Testes-reciclagemQuePaga\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -137,8 +137,8 @@
             "framework": "net8.0-windows7.0",
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
-                "projectPath": "C:\\Users\\henri\\source\\repos\\reciclagem-que-paga\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj"
+              "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj": {
+                "projectPath": "C:\\Users\\Cliente\\source\\repos\\reciclagem-que-paga\\rqqp\\ReciclagemQuePaga\\ReciclagemQuePaga.csproj"
               }
             }
           }
@@ -195,15 +195,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
+              "version": "[8.0.27, 8.0.27]"
             }
           ],
           "frameworkReferences": {
@@ -211,7 +211,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

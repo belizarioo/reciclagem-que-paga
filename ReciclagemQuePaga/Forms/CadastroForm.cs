@@ -34,13 +34,10 @@ namespace ReciclagemQuePaga.Forms
             msk_txb_cpf.Clear();
             txb_email.Clear();
             txb_senha.Clear();
-            if(txb_confirmar_senha != null) txb_confirmar_senha.Clear();
+            if (txb_confirmar_senha != null) txb_confirmar_senha.Clear();
         }
 
-        private void CadastroForm_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
@@ -64,8 +61,8 @@ namespace ReciclagemQuePaga.Forms
             string cpf = msk_txb_cpf.Text.Replace(".", "").Replace("-", "").Trim();
             string email = txb_email.Text;
             string senha = txb_senha.Text;
-            
-            if(txb_confirmar_senha.Text != senha)
+
+            if (txb_confirmar_senha.Text != senha)
             {
                 MessageBox.Show("As senhas digitas não coincidem!");
                 return;
@@ -82,7 +79,7 @@ namespace ReciclagemQuePaga.Forms
                 loginForm.Show();
                 this.Hide();
             }
-            catch(InvalidOperationException ex)
+            catch (InvalidOperationException ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -96,7 +93,7 @@ namespace ReciclagemQuePaga.Forms
         private void voltar_telalogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LimparCampos();
-            
+
             LoginForm form1 = (LoginForm)Application.OpenForms["loginForm"];
 
             if (form1 == null)
@@ -118,15 +115,7 @@ namespace ReciclagemQuePaga.Forms
             this.Hide();
         }
 
-        private void txb_email_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_nome_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void CadastroForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -135,9 +124,9 @@ namespace ReciclagemQuePaga.Forms
 
         private void CadastroForm_Paint(object sender, PaintEventArgs e)
         {
-            
+
             Color corInicio = Color.FromArgb(195, 212, 200);
-            Color corFim = Color.FromArgb(27, 77, 46);       
+            Color corFim = Color.FromArgb(27, 77, 46);
 
             using (System.Drawing.Drawing2D.LinearGradientBrush brush =
                 new System.Drawing.Drawing2D.LinearGradientBrush(
@@ -149,5 +138,8 @@ namespace ReciclagemQuePaga.Forms
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
+
+       
+     
     }
 }

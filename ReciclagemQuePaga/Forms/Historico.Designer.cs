@@ -79,7 +79,6 @@
             dgw_historico.RowHeadersWidth = 51;
             dgw_historico.Size = new Size(776, 299);
             dgw_historico.TabIndex = 0;
-            dgw_historico.CellContentClick += dgw_historico_CellContentClick;
             // 
             // dh
             // 
@@ -159,7 +158,7 @@
             label6.Location = new Point(431, 430);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(357, 15);
+            label6.Size = new Size(356, 15);
             label6.TabIndex = 17;
             label6.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
@@ -191,6 +190,7 @@
             Name = "Historico";
             Text = "Histórico";
             Activated += Historico_Activated;
+          
             Paint += Historico_Paint;
             ((System.ComponentModel.ISupportInitialize)dgw_historico).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

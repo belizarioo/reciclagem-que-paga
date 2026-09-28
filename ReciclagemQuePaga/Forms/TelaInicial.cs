@@ -66,10 +66,7 @@ namespace ReciclagemQuePaga.Forms
             timer1.Start();
         }
 
-        private void TelaInicial_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+  
 
         private void TelaInicial_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -79,16 +76,7 @@ namespace ReciclagemQuePaga.Forms
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_inicio_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void menu_lateral_Paint(object sender, PaintEventArgs e)
         {
             menu_lateral.Dock = DockStyle.Left;
@@ -100,25 +88,7 @@ namespace ReciclagemQuePaga.Forms
             painel_principal.Dock = DockStyle.Fill;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void painel_maquina_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lbl_nU_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btn_maquina_Click(object sender, EventArgs e)
         {
@@ -198,11 +168,11 @@ namespace ReciclagemQuePaga.Forms
 
             string[] telasParaFechar = ["maquina", "saldo", "historico"];
 
-            foreach(string nomeTela in telasParaFechar)
+            foreach (string nomeTela in telasParaFechar)
             {
                 Form? tela = Application.OpenForms[nomeTela];
 
-                if(tela != null)
+                if (tela != null)
                 {
                     tela.Close();
                 }
@@ -294,15 +264,7 @@ namespace ReciclagemQuePaga.Forms
             this.Hide();
         }
 
-        private void flowLayoutPanel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_início_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 
 }

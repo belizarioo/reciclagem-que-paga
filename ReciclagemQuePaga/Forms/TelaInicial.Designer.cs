@@ -108,7 +108,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(792, 29);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+
             // 
             // flowLayoutPanel1
             // 
@@ -130,7 +130,7 @@
             // 
             // menu_lateral
             // 
-            menu_lateral.BackColor = Color.DarkSeaGreen;
+            menu_lateral.BackColor = Color.SeaGreen;
             menu_lateral.Controls.Add(flowLayoutPanel2);
             menu_lateral.Controls.Add(flowLayoutPanel3);
             menu_lateral.Controls.Add(flowLayoutPanel4);
@@ -165,7 +165,7 @@
             // 
             // btn_início
             // 
-            btn_início.BackColor = Color.DarkSeaGreen;
+            btn_início.BackColor = Color.SeaGreen;
             btn_início.FlatAppearance.BorderSize = 0;
             btn_início.FlatStyle = FlatStyle.Flat;
             btn_início.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -176,7 +176,6 @@
             btn_início.TabIndex = 4;
             btn_início.Text = "Início";
             btn_início.UseVisualStyleBackColor = false;
-            btn_início.Click += btn_início_Click;
             // 
             // flowLayoutPanel3
             // 
@@ -283,7 +282,6 @@
             flowLayoutPanel6.Name = "flowLayoutPanel6";
             flowLayoutPanel6.Size = new Size(153, 181);
             flowLayoutPanel6.TabIndex = 6;
-            flowLayoutPanel6.Paint += flowLayoutPanel6_Paint;
             // 
             // flowLayoutPanel7
             // 
@@ -341,11 +339,10 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(279, 406);
             label5.Location = new Point(279, 409);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(357, 15);
+            label5.Size = new Size(356, 15);
             label5.TabIndex = 15;
             label5.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
             // 
@@ -369,7 +366,7 @@
             lbl_nU.Name = "lbl_nU";
             lbl_nU.Size = new Size(0, 25);
             lbl_nU.TabIndex = 1;
-            lbl_nU.Click += lbl_nU_Click;
+            
             // 
             // flow
             // 
@@ -387,7 +384,7 @@
             // 
             // painel_simula
             // 
-            painel_simula.BackColor = Color.ForestGreen;
+            painel_simula.BackColor = Color.SeaGreen;
             painel_simula.BorderStyle = BorderStyle.FixedSingle;
             painel_simula.Controls.Add(label4);
             painel_simula.Controls.Add(label2);
@@ -473,7 +470,7 @@
             // 
             // painel_historico
             // 
-            painel_historico.BackColor = Color.DarkSeaGreen;
+            painel_historico.BackColor = Color.SeaGreen;
             painel_historico.Controls.Add(pictureBox8);
             painel_historico.Controls.Add(label8);
             painel_historico.Controls.Add(label7);
@@ -497,7 +494,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = Color.DarkSeaGreen;
+            label8.BackColor = Color.SeaGreen;
             label8.Font = new Font("Trebuchet MS", 12F);
             label8.ForeColor = SystemColors.Window;
             label8.Location = new Point(0, 57);
@@ -509,7 +506,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.DarkSeaGreen;
+            label7.BackColor = Color.SeaGreen;
             label7.Font = new Font("Trebuchet MS", 10.5F);
             label7.ForeColor = SystemColors.Window;
             label7.Location = new Point(0, 41);
@@ -544,7 +541,7 @@
             // 
             // painel_saldo
             // 
-            painel_saldo.BackColor = Color.DarkSeaGreen;
+            painel_saldo.BackColor = Color.SeaGreen;
             painel_saldo.Controls.Add(pictureBox9);
             painel_saldo.Controls.Add(label11);
             painel_saldo.Controls.Add(label10);
@@ -568,7 +565,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.BackColor = Color.DarkSeaGreen;
+            label11.BackColor = Color.SeaGreen;
             label11.Font = new Font("Trebuchet MS", 12F);
             label11.ForeColor = SystemColors.Window;
             label11.Location = new Point(3, 61);
@@ -626,6 +623,7 @@
             Name = "TelaInicial";
             Text = "Tela Inicial - Bem Vindo!";
             FormClosed += TelaInicial_FormClosed;
+       
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_ham).EndInit();
             menu_lateral.ResumeLayout(false);
