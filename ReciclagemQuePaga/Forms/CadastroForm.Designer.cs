@@ -66,7 +66,7 @@
             txb_email.PlaceholderText = "Insira seu e-mail";
             txb_email.Size = new Size(338, 34);
             txb_email.TabIndex = 3;
-            txb_email.TextChanged += txb_email_TextChanged;
+          
             // 
             // txb_senha
             // 
@@ -162,7 +162,7 @@
             lbl_nome.Size = new Size(65, 24);
             lbl_nome.TabIndex = 9;
             lbl_nome.Text = "Nome:";
-            lbl_nome.Click += lbl_nome_Click;
+         
             // 
             // txb_nome
             // 
@@ -236,6 +236,7 @@
             Name = "CadastroForm";
             Text = "Tela de Cadastro";
             FormClosed += CadastroForm_FormClosed;
+           
             Paint += CadastroForm_Paint;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

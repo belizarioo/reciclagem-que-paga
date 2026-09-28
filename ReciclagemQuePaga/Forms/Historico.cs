@@ -66,10 +66,7 @@ namespace ReciclagemQuePaga.Forms
             dgw_historico.DataSource = _transacaoService.ListarTransacoes(usuarioId).OrderByDescending(t => t.data_hora_transacao).ToList();
         }
 
-        private void dgw_historico_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void Historico_Paint(object sender, PaintEventArgs e)
         {
@@ -86,5 +83,7 @@ namespace ReciclagemQuePaga.Forms
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
+
+     
     }
 }
