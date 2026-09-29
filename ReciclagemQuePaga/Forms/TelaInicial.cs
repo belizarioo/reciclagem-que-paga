@@ -66,7 +66,7 @@ namespace ReciclagemQuePaga.Forms
             timer1.Start();
         }
 
-  
+
 
         private void TelaInicial_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -76,7 +76,7 @@ namespace ReciclagemQuePaga.Forms
             }
         }
 
-     
+
         private void menu_lateral_Paint(object sender, PaintEventArgs e)
         {
             menu_lateral.Dock = DockStyle.Left;
@@ -88,7 +88,7 @@ namespace ReciclagemQuePaga.Forms
             painel_principal.Dock = DockStyle.Fill;
         }
 
-       
+
 
         private void btn_maquina_Click(object sender, EventArgs e)
         {
@@ -264,7 +264,25 @@ namespace ReciclagemQuePaga.Forms
             this.Hide();
         }
 
-      
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Controls.Add(label5);
+            label5.BringToFront();
+
+            label5.AutoSize = true;
+
+           
+            label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+
+           
+            label5.Left = this.ClientSize.Width - label5.Width - 15;
+            label5.Top = this.ClientSize.Height - label5.Height - 15;
+        }
     }
 
 }

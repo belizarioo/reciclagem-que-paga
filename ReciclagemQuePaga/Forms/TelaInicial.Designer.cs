@@ -108,7 +108,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(792, 29);
             panel1.TabIndex = 0;
-
             // 
             // flowLayoutPanel1
             // 
@@ -323,7 +322,7 @@
             // 
             // painel_principal
             // 
-            painel_principal.BackColor = Color.WhiteSmoke;
+            painel_principal.BackColor = Color.FromArgb(224, 224, 224);
             painel_principal.Controls.Add(label5);
             painel_principal.Controls.Add(pictureBox6);
             painel_principal.Controls.Add(lbl_nU);
@@ -336,15 +335,17 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(279, 409);
+            label5.ForeColor = Color.SeaGreen;
+            label5.Location = new Point(276, 406);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(356, 15);
+            label5.Size = new Size(357, 15);
             label5.TabIndex = 15;
             label5.Text = "v1.0.0 | © 2026 Reciclagem que Paga. Todos os direitos reservados.";
+            label5.Click += label5_Click;
             // 
             // pictureBox6
             // 
@@ -355,18 +356,18 @@
             pictureBox6.Size = new Size(38, 38);
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // lbl_nU
             // 
             lbl_nU.AutoSize = true;
             lbl_nU.BackColor = Color.Transparent;
-            lbl_nU.Font = new Font("Segoe UI", 14F);
-            lbl_nU.ForeColor = Color.White;
+            lbl_nU.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_nU.ForeColor = Color.SeaGreen;
             lbl_nU.Location = new Point(50, 26);
             lbl_nU.Name = "lbl_nU";
-            lbl_nU.Size = new Size(0, 25);
+            lbl_nU.Size = new Size(0, 24);
             lbl_nU.TabIndex = 1;
-            
             // 
             // flow
             // 
@@ -623,7 +624,6 @@
             Name = "TelaInicial";
             Text = "Tela Inicial - Bem Vindo!";
             FormClosed += TelaInicial_FormClosed;
-       
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_ham).EndInit();
             menu_lateral.ResumeLayout(false);

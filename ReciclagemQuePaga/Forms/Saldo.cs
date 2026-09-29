@@ -81,7 +81,7 @@ namespace ReciclagemQuePaga.Forms
             }
 
                     DialogResult resultado = MessageBox.Show(
-                    "Deseja realmente realizar esse Resgate",
+                    "Deseja realmente realizar esse resgate?",
                     "",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
