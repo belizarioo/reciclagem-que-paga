@@ -11,7 +11,6 @@ O **Reciclagem Que Paga** é um projeto de MVP (Minimum Viable Product) desenvol
 * **Linguagem:** C# (.NET 8)
 * **Interface:** Windows Forms (UI modularizada com padrão Kiosk/Cards)
 * **Persistência & ORM:** Entity Framework Core + SQL Server
-* **Qualidade & Testes:** xUnit
 * **Controle de Versão:** Git / GitHub (Workflow baseado em Feature Branches e Code Review via Pull Requests)
 
 ---
